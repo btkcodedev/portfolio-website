@@ -8,12 +8,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
       - uses: actions/setup-node@v1
         with:
           node-version: "18"
       - run: npm ci
       - run: npm run build
+      - name: Upload artifact 📡
+        uses: actions/upload-pages-artifact@v3
+        with:
+            path: ./build
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:
