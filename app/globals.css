@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-full antialiased dark:bg-neutral-950 dark:text-neutral-50;
+  }
+    /* For light theme */
+    .theme-light ::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    .theme-light ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  
+    .theme-light ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+      border-radius: 4px;
+    }
+  
+    .theme-light ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, #e0e0e0 0%, #c0c0c0 100%);
+    }
+  
+    /* For dark theme */
+    .theme-dark ::-webkit-scrollbar {
+      width: 10px;
+    }
+  
+    .theme-dark ::-webkit-scrollbar-track {
+      background: #888;
+      border-radius: 5px;
+    }
+  
+    .theme-dark ::-webkit-scrollbar-thumb {
+      background: linear-gradient(
+        to bottom,
+        #222 0%,
+        #000 100%
+      );
+      border-radius: 5px;
+    }
+  
+    .theme-dark ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(
+        to bottom,
+        #555 0%,
+        #333 100%
+      );
+    }
+}
