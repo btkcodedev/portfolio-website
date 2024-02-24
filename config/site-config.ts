@@ -132,6 +132,28 @@ const GridItems: GridItemInterface[] = [
     buttonColor: "#1DA1F2"
   },
   {
+    layout: "1x2",
+    type: "social",
+    title: "Google Cloud Profile",
+    icon: "gcp",
+    username: "@btkcodedev",
+    buttonTitle: "See my skills",
+    buttonSecondaryText: "",
+    buttonLink: "https://www.cloudskillsboost.google/public_profiles/aee4fd0f-d8b1-402d-ad12-9bac68a25ee1",
+    color: "#ffffff",
+    buttonColor: "#1DA1F2"
+  },
+  {
+    layout: "2x1",
+    type: "mentor",
+    title: "Medium",
+    icon: "medium",
+    promotion: "See my posts",
+    price: "100+",
+    intermediateText: "Recent post views",
+    buttonLink: "https://medium.com/@btkcodedev",
+  },
+  {
     layout: "2x1",
     type: "mentor",
     title: "Hackerrank",
@@ -140,7 +162,7 @@ const GridItems: GridItemInterface[] = [
     price: "Competent",
     intermediateText: "Level",
     buttonLink: "https://www.hackerrank.com/profile/ibala_tk",
-  }
+  },
 ];
 
 export const siteConfig = {
