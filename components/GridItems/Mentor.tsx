@@ -1,4 +1,4 @@
-import { GridItemInterface } from "@/config/site-config";
+import { GridItemInterface } from "@/components/types";
 import Link from "next/link";
 import Icon from "@/components/common/Icon";
 

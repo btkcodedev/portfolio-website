@@ -1,12 +1,10 @@
+import { ButtonType } from "@/components/types";
+
 const Button = ({
     text,
     secondaryText,
     color = "#070707",
-  }: {
-    text: string;
-    secondaryText?: string;
-    color?: string;
-  }) => {
+  }: ButtonType) => {
     return (
       <div
         style={{

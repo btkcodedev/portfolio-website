@@ -1,4 +1,4 @@
-import { GridItemInterface } from "@/config/site-config";
+import { GridItemInterface } from "@/components/types";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import Icon from "@/components/common/Icon";

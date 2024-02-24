@@ -1,4 +1,5 @@
-import { GridItemInterface, LanguageItem } from "@/config/site-config";
+import { GridItemInterface, LanguageItem } from "@/components/types";
+import { LanguageTitle } from "@/components/types/enum";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -6,13 +7,6 @@ import { useState } from "react";
 const Languages = ({ item }: { item: GridItemInterface }) => {
   const [image, setImage] = useState(item.image);
   const [gradient, setGradient] = useState(true);
-  enum LanguageTitle {
-    Javascript = "Javascript",
-    Python = "Python",
-    Nodejs = "Node.js",
-    Django = "Django",
-    YAML = "YAML",
-  }
 
   const setTheImage = (imageItem: LanguageItem | string) => {
     if (typeof imageItem === "object") {
