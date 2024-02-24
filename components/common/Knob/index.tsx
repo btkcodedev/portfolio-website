@@ -2,7 +2,9 @@ import { useEffect } from "react";
 
 const Knob = () => {
   useEffect(() => {
-    const audio = new Audio("https://www.cineblueone.com/maskWall/audio/skylar.mp3");
+    const audio = new Audio(
+      "https://www.cineblueone.com/maskWall/audio/skylar.mp3"
+    );
     const tickContainer = document.getElementById("tickContainer");
     const volumeKnob = document.getElementById("knob");
     let mouseX: number, mouseY: number;
@@ -10,7 +12,7 @@ const Knob = () => {
 
     function main() {
       if (!tickContainer || !volumeKnob || !boundingRectangle) return;
-      
+
       audio.volume = 0;
 
       volumeKnob.addEventListener(getMouseDown(), onMouseDown);
@@ -37,8 +39,10 @@ const Knob = () => {
     function onMouseMove(event: MouseEvent | TouchEvent) {
       if (!boundingRectangle) return;
 
-      mouseX = event instanceof MouseEvent ? event.pageX : event.touches[0].pageX;
-      mouseY = event instanceof MouseEvent ? event.pageY : event.touches[0].pageY;
+      mouseX =
+        event instanceof MouseEvent ? event.pageX : event.touches[0].pageX;
+      mouseY =
+        event instanceof MouseEvent ? event.pageY : event.touches[0].pageY;
 
       const knobCenterX = boundingRectangle.width / 2 + boundingRectangle.left;
       const knobCenterY = boundingRectangle.height / 2 + boundingRectangle.top;
@@ -107,7 +111,7 @@ const Knob = () => {
   return (
     <div>
       <p>
-        Current volume:{" "}
+        Current volume:
         <span id="volumeValue" className="current-value">
           0%
         </span>
