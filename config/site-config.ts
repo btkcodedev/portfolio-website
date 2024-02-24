@@ -142,7 +142,7 @@ const GridItems: GridItemInterface[] = [
     title: "Google Cloud Profile",
     icon: "gcp",
     username: "@btkcodedev",
-    buttonTitle: "See my skills",
+    buttonTitle: "See my badges",
     buttonSecondaryText: "",
     buttonLink: "https://www.cloudskillsboost.google/public_profiles/aee4fd0f-d8b1-402d-ad12-9bac68a25ee1",
     color: "#ffffff",
