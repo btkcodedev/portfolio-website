@@ -32,7 +32,7 @@ const RightPanel = () => {
         }
       );
     }
-  }, [scope]);
+  }, [scope, animate, staggerGridItems]);
 
   return (
     <div
