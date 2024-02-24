@@ -1,8 +1,9 @@
 export type GridItemLayout = "1x2" | "2x1" | "2x2" | "2x4"; // wxh
-export type GridItemType = "social" | "equipment" | "mentor" | "project";
-export type EqiupmentItem = {
+export type GridItemType = "social" | "language" | "mentor" | "project";
+export type LanguageItem = {
   title: string;
   link: string;
+  languageImage: string;
 };
 
 export interface GridItemInterface {
@@ -22,8 +23,7 @@ export interface GridItemInterface {
   oldPrice?: string;
   /* Project */
   stars?: number;
-  /* Equipments */
-  equipments?: EqiupmentItem[];
+  languages?: LanguageItem[];
   image?: string;
   buttonColor?: string;
   intermediateText?: string;
@@ -67,29 +67,34 @@ const GridItems: GridItemInterface[] = [
   },
   {
     layout: "2x4",
-    type: "equipment",
+    type: "language",
     title: "Coding preferences",
     image: "/background.jpg",
-    equipments: [
+    languages: [
       {
         title: "Javascript",
         link: "#",
+        languageImage: "/javascript.jpg"
       },
       {
         title: "Python",
         link: "#",
+        languageImage: "/python.jpg"
       },
       {
         title: "Node.js",
         link: "#",
+        languageImage: "/nodejs.jpg"
       },
       {
         title: "Django",
         link: "#",
+        languageImage: "/django.jpg"
       },
       {
         title: "YAML",
         link: "#",
+        languageImage: "/yaml.jpg"
       },
     ],
   },
@@ -98,7 +103,7 @@ const GridItems: GridItemInterface[] = [
     type: "social",
     title: "Twitter",
     icon: "twitter",
-    username: "@btkcodedev",
+    username: "@ibala_tk",
     buttonTitle: "Follow",
     buttonLink: "https://twitter.com/ibala_tk",
     buttonSecondaryText: "40",

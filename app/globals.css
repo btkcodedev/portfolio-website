@@ -6,48 +6,87 @@
   body {
     @apply h-full antialiased dark:bg-neutral-950 dark:text-neutral-50;
   }
-    /* For light theme */
-    .theme-light ::-webkit-scrollbar {
-      width: 8px;
-    }
+  /* For light theme */
+  .theme-light ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .theme-light ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .theme-light ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
+    border-radius: 4px;
+  }
+
+  .theme-light ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #e0e0e0 0%, #c0c0c0 100%);
+  }
+
+  /* For dark theme */
+  .theme-dark ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .theme-dark ::-webkit-scrollbar-track {
+    background: #888;
+    border-radius: 5px;
+  }
+
+  .theme-dark ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #222 0%, #000 100%);
+    border-radius: 5px;
+  }
+
+  .theme-dark ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #555 0%, #333 100%);
+  }
+
+  /*For gradient animations*/
+  .gradient-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffae00, #ff007f, #ff00ff, #4875fc, #f59505, #00ffcc, #ffae00, #ffae00);
+    background-size: 800% 800%;
+    animation: gradientAnimation 7s ease-in-out infinite;
+  }
   
-    .theme-light ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
     }
+    10% {
+      background-position: 10% 50%;
+    }
+    20% {
+      background-position: 20% 50%;
+    }
+    30% {
+      background-position: 30% 50%;
+    }
+    40% {
+      background-position: 40% 50%;
+    }
+    50% {
+      background-position: 50% 50%;
+    }
+    60% {
+      background-position: 40% 50%;
+    }
+    70% {
+      background-position: 30% 50%;
+    }
+    80% {
+      background-position: 20% 50%;
+    }
+    90% {
+      background-position: 10% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   
-    .theme-light ::-webkit-scrollbar-thumb {
-      background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%);
-      border-radius: 4px;
-    }
-  
-    .theme-light ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(to bottom, #e0e0e0 0%, #c0c0c0 100%);
-    }
-  
-    /* For dark theme */
-    .theme-dark ::-webkit-scrollbar {
-      width: 10px;
-    }
-  
-    .theme-dark ::-webkit-scrollbar-track {
-      background: #888;
-      border-radius: 5px;
-    }
-  
-    .theme-dark ::-webkit-scrollbar-thumb {
-      background: linear-gradient(
-        to bottom,
-        #222 0%,
-        #000 100%
-      );
-      border-radius: 5px;
-    }
-  
-    .theme-dark ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(
-        to bottom,
-        #555 0%,
-        #333 100%
-      );
-    }
 }

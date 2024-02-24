@@ -1,7 +1,8 @@
 "use client";
-import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 const variants = cva(
   "shadow-md rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center @container",
@@ -33,13 +34,13 @@ const GridItem = ({ size, children }: GridItemProps) => {
         y: 120,
         opacity: 0,
       }}
-      className={cn(
+      className={twMerge(clsx(
         variants({
           size,
           className:
             "hover:dark:bg-neutral-800 hover:bg-neutral-50 duration-75 transition-colors ease-in-out",
         })
-      )}
+      ))}
     >
       {children}
     </motion.div>

@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site-config";
 import { stagger, useAnimate } from "framer-motion";
 import { useEffect } from "react";
 import GridItem from "@/components/common/GridItem";
-import Equipments from "@/components/GridItems/Equipments";
+import Languages from "@/components/GridItems/Languages";
 import Mentor from "@/components/GridItems/Mentor";
 import Project from "@/components/GridItems/Project";
 import Social from "@/components/GridItems/Social";
@@ -37,7 +37,7 @@ const RightPanel = () => {
   return (
     <div
       ref={scope}
-      className="grid w-full grid-cols-4 xl:gap-10 gap-6 xl:py-10 py-6 xl:px-2 xl:overflow-y-auto auto-rows-[76px]"
+      className="grid w-full grid-cols-4 xl:gap-10 gap-6 xl:py-10 py-6 xl:px-2 xl:overflow-y-auto auto-rows-[75px]"
     >
       {siteConfig.items.map((item, index) => {
         return (
@@ -48,8 +48,8 @@ const RightPanel = () => {
               <Mentor item={item} />
             ) : item.type === "project" ? (
               <Project item={item} />
-            ) : item.type === "equipment" ? (
-              <Equipments item={item} />
+            ) : item.type === "language" ? (
+              <Languages item={item} />
             ) : (
               <div>Need to create new component type.</div>
             )}
