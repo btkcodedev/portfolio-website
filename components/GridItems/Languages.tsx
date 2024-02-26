@@ -72,7 +72,7 @@ const Languages = ({ item }: { item: GridItemInterface }) => {
         {displayText.length > 0 && (
           <div className="flex items-center w-full h-full overflow-hidden p-8 justify-center align-center">
             <motion.div
-              className="z-10 bg-white dark:bg-neutral-900 flex items-start p-8 text-sm font-medium text-black dark:text-white h-full rounded-lg w-full"
+              className="z-10 bg-white dark:bg-neutral-900 flex items-start p-2 text-sm font-medium text-black dark:text-white h-full rounded-lg w-full"
               initial={{ opacity: 0.5 }}
               animate={{ opacity: 0.9 }}
               style={{ whiteSpace: 'pre' }}

@@ -19,7 +19,8 @@ export enum LanguageCode {
   new Promise(resolve => setTimeout(
   () => resolve("Hello, World!"), ms));
    
-   greetWithDelay(1000).then(msg => console.log(msg));`,
+   greetWithDelay(1000).then(
+    msg => console.log(msg));`,
   PythonHelloWorld = `def hello_world():
     print("Hello, World!")
 
