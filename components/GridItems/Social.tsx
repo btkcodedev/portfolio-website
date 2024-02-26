@@ -6,7 +6,7 @@ import { GridItemInterface } from "@/components/types";
 const Social = ({ item }: { item: GridItemInterface }) => {
   return (
     <Link href={item.buttonLink ?? ""}>
-      {/* Header */}
+
       <div className="flex items-center justify-between">
         {item.icon && <Icon type={item.icon} color={item.color ?? "#fff"} />}
         {item.layout === "2x2" && (
@@ -17,7 +17,7 @@ const Social = ({ item }: { item: GridItemInterface }) => {
           />
         )}
       </div>
-      {/* Content */}
+
       <div className="mt-2">
         <div className="@lg:text-lg font-semibold line-clamp-1">
           {item.title}

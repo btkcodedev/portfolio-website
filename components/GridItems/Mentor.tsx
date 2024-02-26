@@ -12,7 +12,7 @@ const Mentor = ({ item }: { item: GridItemInterface }) => {
       {item.icon && <Icon type={item.icon} color={item.color} />}
       <div className="w-full @lg:text-lg font-semibold">{item.title}</div>
       <div className="">
-        {/* Top Container */}
+
         <div className="flex items-center justify-between w-max">
           <div className="text-xs text-neutral-500 pr-2">
             {item.intermediateText}
@@ -21,7 +21,7 @@ const Mentor = ({ item }: { item: GridItemInterface }) => {
             <div>{item.price}</div>
           </div>
         </div>
-        {/* Bottom Container */}
+
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
