@@ -24,7 +24,7 @@ const LeftPanel = ({
         </div>
         <div className="border-b mb-5" /> */}
         <Bio />
-        <div className="border-t mt-6 border-neutral-100 dark:border-neutral-800">
+        {/* <div className="border-t mt-6 border-neutral-100 dark:border-neutral-800">
           <MiniButton
             buttonText="About"
             category={IconTypes.SEARCH}
@@ -49,7 +49,7 @@ const LeftPanel = ({
             href="#"
             clickedCategory={clickedCategory}
           />
-        </div>
+        </div> */}
 
         {/* Footer */}
         <div className="hidden mt-6 xl:flex">

@@ -1,6 +1,7 @@
 import { GridItemInterface } from "@/components/types";
 import Link from "next/link";
 import Icon from "@/components/common/Icon";
+import { motion } from "framer-motion";
 
 const Mentor = ({ item }: { item: GridItemInterface }) => {
   return (
@@ -21,9 +22,13 @@ const Mentor = ({ item }: { item: GridItemInterface }) => {
           </div>
         </div>
         {/* Bottom Container */}
-        <div className="flex font-bold text-primary @lg:text-base text-sm justify-end">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="flex font-bold text-primary @lg:text-base text-sm justify-end"
+        >
           <div>{item.promotion}</div>
-        </div>
+        </motion.div>
       </div>
     </Link>
   );

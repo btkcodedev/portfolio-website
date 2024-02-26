@@ -3,10 +3,11 @@ import { siteConfig } from "@/config/site-config";
 import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import { ThemeToggle } from "@/components/Theme";
+import RippleButton from "@/components/common/StyledLinkButton";
 
 const Bio = () => {
   return (
-    <>
+    <div className="shadow-md rounded-xl backdrop-filter backdrop-blur-lg bg-opacity-20 bg-white dark:bg-neutral-900 bg-opacity-10/80 border-opacity-50 p-6">
       <div>
         <Image
           priority
@@ -24,7 +25,6 @@ const Bio = () => {
         />
       </div>
 
-      {/* Text Container */}
       <div className="mt-6">
         <div className="flex flex-row justify-start items-center gap-3">
           <div
@@ -40,27 +40,31 @@ const Bio = () => {
           <ThemeToggle />
         </div>
 
-        <h1 className="mt-2 text-4xl font-bold">{siteConfig.creator}</h1>
-        <p className="text-2xl font-light text-neutral-500">{siteConfig.bio}</p>
+        <h1 className="mt-2 text-3xl font-bold">{siteConfig.creator}</h1>
+        <p className="text-xl font-light text-neutral-500">{siteConfig.bio}</p>
       </div>
-      {/* Buttons Container */}
+
       <div className="flex items-center gap-3 mt-6">
-        <a
+        <RippleButton
+          element={<MapPin size="14" />}
+          buttonText={siteConfig.location}
+          style={{
+            backgroundImage: "linear-gradient(to right, #FFA07A, #FF4500)",
+            transition: "background 0.5s ease",
+          }}
           href={`${siteConfig.locationLink}`}
-          className="shadow-md flex items-center w-full gap-2 px-4 py-2 text-sm font-medium border rounded-md border-neutral-100 dark:border-neutral-800"
-        >
-          <MapPin size="14" />
-          {siteConfig.location}
-        </a>
-        <a
+        />
+        <RippleButton
+          element={<Mail size="14" />}
+          buttonText={`Contact Me`}
+          style={{
+            backgroundImage: "linear-gradient(to right, #87CEEB, #4682B4)",
+            transition: "background 0.5s ease",
+          }}
           href={`mailto:${siteConfig.email}`}
-          className="shadow-md flex items-center w-full gap-2 px-4 py-2 text-sm font-medium border rounded-md border-neutral-100 dark:border-neutral-800"
-        >
-          <Mail size="14" />
-          Contact Me
-        </a>
+        />
       </div>
-    </>
+    </div>
   );
 };
 
