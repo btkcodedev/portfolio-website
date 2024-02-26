@@ -45,7 +45,6 @@ const Languages = ({ item }: { item: GridItemInterface }) => {
       default:
         codeText = "Hello World";
     }
-    console.log(codeText, language)
     return codeText;
   };
 
