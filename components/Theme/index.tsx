@@ -13,11 +13,17 @@ export function ThemeToggle() {
     container.classList.add(`theme-${theme}`);
   }, [theme]);
 
+  useEffect(() => {
+    if (theme !== "dark") {
+      setTheme("dark");
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div
       className="shadow-md bg-white dark:bg-neutral-800 mt-1 px-2 py-2 cursor-pointer flex rounded-lg"
-      placeholder="Change theme"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       <button className="relative inline-flex justify-center items-center">
         <Sun

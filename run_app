@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Function to start Docker Compose
+start() {
+  docker-compose build
+  docker-compose up --no-recreate
+}
+
+# Function to stop Docker Compose
+stop() {
+  docker-compose down
+}
+
+# Check the command-line arguments
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  *)
+    start
+    ;;
+esac

@@ -52,7 +52,7 @@ const Bio = () => {
             backgroundImage: "linear-gradient(to right, #FFA07A, #FF4500)",
             transition: "background 0.5s ease",
           }}
-          href={`${siteConfig.locationLink}`}
+          href={siteConfig.locationLink}
         />
         <RippleButton
           element={<Mail size="14" />}
