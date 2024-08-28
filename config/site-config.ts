@@ -354,13 +354,13 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "2x4",
     type: "language",
-    title: "Coding preferences",
+    title: "Things I Love",
     image: "/background.jpg",
     languages: [
       {
-        title: "Javascript",
+        title: "Typescript",
         link: "#",
-        languageImage: "/javascript.jpg"
+        languageImage: "/typescript.jpg"
       },
       {
         title: "Python",
@@ -373,14 +373,9 @@ const GridItems: GridItemInterface[] = [
         languageImage: "/nodejs.jpg"
       },
       {
-        title: "Django",
+        title: "Jackie Chan Movies",
         link: "#",
-        languageImage: "/django.jpg"
-      },
-      {
-        title: "YAML",
-        link: "#",
-        languageImage: "/yaml.jpg"
+        languageImage: "/jackie.jpg"
       },
     ],
   },

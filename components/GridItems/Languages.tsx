@@ -27,7 +27,7 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
   const setCode = (language: LanguageItem) => {
     let codeText = "";
     switch (language.title) {
-      case LanguageTitle.Javascript:
+      case LanguageTitle.Typescript:
         codeText = LanguageCode.JavascriptHelloWorld;
         break;
       case LanguageTitle.Django:
@@ -41,6 +41,9 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
         break;
       case LanguageTitle.YAML:
         codeText = LanguageCode.YAMLHelloWorld;
+        break;
+      case LanguageTitle.JACKIE:
+        codeText = LanguageCode.JackieHelloWorld;
         break;
       default:
         codeText = "Hello World";
@@ -69,7 +72,7 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
     >
       <div className="flex flex-col w-full h-full overflow-hidden rounded-3xl">
         {displayText.length > 0 && (
-          <div className="flex items-center w-full h-full overflow-hidden p-8 justify-center align-center">
+          <div className="flex items-center w-full h-full overflow-hidden p-8 justify-center align-center mt-56">
             <motion.div
               className="z-10 bg-white dark:bg-neutral-900 flex items-start p-2 text-sm font-medium text-black dark:text-white h-full rounded-lg w-full"
               initial={{ opacity: 0.5 }}
