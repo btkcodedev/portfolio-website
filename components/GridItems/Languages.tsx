@@ -1,10 +1,10 @@
-import { GridItemInterface, LanguageItem } from "@/components/types";
-import { LanguageCode, LanguageTitle } from "@/components/types/enum";
+import { CombinedInterfaces, LanguageItem } from "@/components/Types";
+import { LanguageCode, LanguageTitle } from "@/components/Types/enum";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-const Languages = ({ item }: { item: GridItemInterface }) => {
+const Languages = ({ item }: { item: CombinedInterfaces }) => {
   const [image, setImage] = useState(item.image);
   const [gradient, setGradient] = useState(true);
   

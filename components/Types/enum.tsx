@@ -6,6 +6,14 @@ export enum IconTypes {
   PROJECTS = "projects",
 }
 
+export enum LeftPanelOptions {
+  ABOUT = "About",
+  EXPERIENCE = "Experience",
+  ACHIEVEMENTS = "Achievements",
+  PROJECTS = "Projects",
+  EASTEREGG = "EasterEgg"
+}
+
 export enum LanguageTitle {
   Javascript = "Javascript",
   Python = "Python",

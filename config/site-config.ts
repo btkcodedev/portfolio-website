@@ -1,4 +1,319 @@
-import { GridItemInterface } from "@/components/types";
+import { AchievementItemInterface, ExperienceItemInterface, GridItemInterface, ProjectItemInterface } from "@/components/Types";
+
+const ProjItems: ProjectItemInterface[] = [
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Open source contributions",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Airbyte",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "MNE-Python",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "MindsDB Benchmarks",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Algorithms-Explanation ",
+        link: "#",
+        languageImage: "/name.jpg"
+      }
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Portfolio you are looking at :P",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Bento style",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Easter Egg",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Responsive screen grid architecture",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Vite + Tailwind + Firebase + TSX",
+        link: "#",
+        languageImage: "/name.jpg"
+      }
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Jobify",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Jobify-backend scrapes jobs",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Jobify-frontend displays jobs",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Both are connected in github workflows",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Niche App developer + ML developer... Does that count?",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "QR code generator App",
+        link: "#",
+        languageImage: "/javascript.jpg"
+      },
+      {
+        title: "ML Projects IPY notebook",
+        link: "#",
+        languageImage: "/python.jpg"
+      },
+      {
+        title: "and a long way to go......",
+        link: "#",
+        languageImage: "/nodejs.jpg"
+      },
+    ],
+  },
+]
+
+const ExpItems: ExperienceItemInterface[] = [
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Software Engineer @ QBurst",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Handled client projects - E-commerce giants who signed NDA, ssshh...",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Internal projects - Worklog tracking web app, Video Chat web app",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Component test suite development",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Slides and Documentation development",
+        link: "#",
+        languageImage: "/name.jpg"
+      }
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Part-time contributor @ Airbyte",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "'Hired' as a lovable contributor - Its mutual <3",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Triple hackathon win",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "25+ new connector contributions to pipeline",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "40+ bugs fixed till now",
+        link: "#",
+        languageImage: "/name.jpg"
+      }
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "JavaScript Mentor @ Tinkerhub",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Golden & Silver badges along with completion of six month tenure",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "LOR from CEO!!!",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Technical writings and documentations",
+        link: "https://paths.tinkerhub.org/react-native/",
+        languageImage: "/name.jpg"
+      },
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Cloud Computing Intern @ Indian Opensource Community",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Hands on AWS & GCP",
+        link: "#",
+        languageImage: "/javascript.jpg"
+      },
+      {
+        title: "CLI access, cluster, load-balancer creation experience",
+        link: "#",
+        languageImage: "/python.jpg"
+      },
+      {
+        title: "Final assesment passed with A+ grade",
+        link: "#",
+        languageImage: "/nodejs.jpg"
+      },
+    ],
+  },
+]
+
+const AchItems: AchievementItemInterface[] = [
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Bachelors Degree College Achievements",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Best Outgoing Student",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Department Topper",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Mathematics Topper",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Best Final Year Project",
+        link: "#",
+        languageImage: "/name.jpg"
+      }
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "JavaScript Mentor for Tinkerhub",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Letter Of Recommendation From Tinkerhub CEO",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Golden Badge",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Silver Badge",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Six months tenure completion",
+        link: "#",
+        languageImage: "/name.jpg"
+      }
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Airbyte Hackathon Winner - Hattrick win",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "PyAirbyte Hackathon | August 2024",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Hashnode x Airbyte | October 2023",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Connector Migration | August 2023",
+        link: "#",
+        languageImage: "/name.jpg"
+      },
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Technical certificates",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "IBM Cybersecurity Analyst Professional",
+        link: "#",
+        languageImage: "/javascript.jpg"
+      },
+      {
+        title: "Google IT Automation Professional",
+        link: "#",
+        languageImage: "/python.jpg"
+      },
+      {
+        title: "Google IT Support Professional",
+        link: "#",
+        languageImage: "/nodejs.jpg"
+      },
+    ],
+  },
+]
 
 const GridItems: GridItemInterface[] = [
   {
@@ -77,7 +392,7 @@ const GridItems: GridItemInterface[] = [
     username: "@ibala_tk",
     buttonTitle: "Follow",
     buttonLink: "https://twitter.com/ibala_tk",
-    buttonSecondaryText: "40",
+    buttonSecondaryText: "80",
     color: "#1DA1F2",
     description:
       "Probe looking for wonders around! Supporter for ELT & Web applications",
@@ -125,7 +440,7 @@ const GridItems: GridItemInterface[] = [
     title: "Medium",
     icon: "medium",
     promotion: "See my posts",
-    price: "100+",
+    reach: "100+",
     intermediateText: "Recent post views",
     buttonLink: "https://medium.com/@btkcodedev",
   },
@@ -135,11 +450,13 @@ const GridItems: GridItemInterface[] = [
     title: "Hackerrank",
     icon: "hackerrank",
     promotion: "See my profile",
-    price: "Competent",
+    reach: "Competent",
     intermediateText: "Level",
     buttonLink: "https://www.hackerrank.com/profile/ibala_tk",
   },
 ];
+
+export const currentYear = new Date().getFullYear();
 
 export const siteConfig = {
   metadata: {
@@ -153,6 +470,9 @@ export const siteConfig = {
   locationLink:
     "https://maps.app.goo.gl/HTiGU32uhqhmVuBZ8",
   email: "btk.codedev@gmail.com",
-  footerText: "Built by @btkcodedev | ©2024 btkcodedev. All Rights Reserved",
-  items: GridItems,
+  footerText: `Built by @btkcodedev | ©${currentYear} btkcodedev. All Rights Reserved`,
+  aboutItems: GridItems,
+  achievementItems: AchItems,
+  experienceItems: ExpItems,
+  projectItems: ProjItems,
 } as const;

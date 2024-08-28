@@ -1,4 +1,4 @@
-import { ButtonType } from "@/components/types";
+import { ButtonType } from "@/components/Types";
 import { motion } from "framer-motion";
 
 const Button = ({ text, secondaryText, color = "#070707" }: ButtonType) => {

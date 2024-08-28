@@ -1,9 +1,9 @@
-import { GridItemInterface } from "@/components/types";
+import { CombinedInterfaces } from "@/components/Types";
 import Link from "next/link";
 import Icon from "@/components/common/Icon";
 import { motion } from "framer-motion";
 
-const Mentor = ({ item }: { item: GridItemInterface }) => {
+const Mentor = ({ item }: { item: CombinedInterfaces }) => {
   return (
     <Link
       href={item.buttonLink ?? ""}
@@ -18,7 +18,7 @@ const Mentor = ({ item }: { item: GridItemInterface }) => {
             {item.intermediateText}
           </div>
           <div className="flex items-center gap-1">
-            <div>{item.price}</div>
+          <div>{item.reach ?? ""}</div>
           </div>
         </div>
 
