@@ -15,20 +15,20 @@ export enum LeftPanelOptions {
 }
 
 export enum LanguageTitle {
+  Typescript = "Typescript",
   Javascript = "Javascript",
   Python = "Python",
   Nodejs = "Node.js",
   Django = "Django",
   YAML = "YAML",
+  JACKIE = "Jackie Chan Movies",
 }
 
 export enum LanguageCode {
-  JavascriptHelloWorld = `const greetWithDelay = ms => 
+  JavascriptHelloWorld = `const greetWithDelay = ms:number => 
   new Promise(resolve => setTimeout(
   () => resolve("Hello, World!"), ms));
-   
-   greetWithDelay(1000).then(
-    msg => console.log(msg));`,
+  ................`,
   PythonHelloWorld = `def hello_world():
     print("Hello, World!")
 
@@ -41,4 +41,6 @@ export enum LanguageCode {
   def hello_world(request):
       return HttpResponse("Hello, World!")`,
   YAMLHelloWorld = `message: "Hello, World!"`,
+  JackieHelloWorld = `Born in Hong Kong, Already a Dragon :)
+  He is/was/will always the legend... <3`,
 }
