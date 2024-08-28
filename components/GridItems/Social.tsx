@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Button from "@/components/common/Button";
 import Icon from "@/components/common/Icon";
-import { GridItemInterface } from "@/components/types";
+import { CombinedInterfaces } from "@/components/Types";
 
-const Social = ({ item }: { item: GridItemInterface }) => {
+const Social = ({ item }: { item: CombinedInterfaces }) => {
   return (
     <Link href={item.buttonLink ?? ""}>
 

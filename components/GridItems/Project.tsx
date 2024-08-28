@@ -1,9 +1,9 @@
-import { GridItemInterface } from "@/components/types";
+import { CombinedInterfaces } from "@/components/Types";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import Icon from "@/components/common/Icon";
 
-const Project = ({ item }: { item: GridItemInterface }) => {
+const Project = ({ item }: { item: CombinedInterfaces }) => {
   return (
     <Link
       href={item.buttonLink ?? ""}
