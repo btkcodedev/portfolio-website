@@ -54,11 +54,14 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
         </div>
 
         <div
-          className="hidden mt-6 xl:flex"
+          className="hidden mt-6 xl:flex cursor-pointer relative group"
           onClick={handleInteraction}
           onTouchStart={handleInteraction}
         >
-          <Footer/>
+          <Footer />
+          <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-sm rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Hidden element... SSSHHHHH...🤫
+          </span>
         </div>
       </div>
     </div>

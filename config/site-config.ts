@@ -358,24 +358,24 @@ const GridItems: GridItemInterface[] = [
     image: "/background.jpg",
     languages: [
       {
-        title: "Typescript",
+        title: "Ty & Py",
         link: "#",
-        languageImage: "/typescript.jpg"
+        languageImage: "/pyty.jpg"
       },
       {
-        title: "Python",
+        title: "Coffee",
         link: "#",
-        languageImage: "/python.jpg"
-      },
-      {
-        title: "Node.js",
-        link: "#",
-        languageImage: "/nodejs.jpg"
+        languageImage: "/coffee.jpg"
       },
       {
         title: "Jackie Chan Movies",
         link: "#",
         languageImage: "/jackie.jpg"
+      },
+      {
+        title: "Github",
+        link: "#",
+        languageImage: "/gh.jpg"
       },
     ],
   },

@@ -129,11 +129,7 @@ const RightPanel = ({ section }: { section: string }) => {
                       key={item.title + item.type + index}
                       size={item.layout}
                     >
-                      {item.type === "lor" ? (
-                        <Social item={item} />
-                      ) : item.type === "hackathon" ? (
-                        <Mentor item={item} />
-                      ) : item.type === "certificate" ? (
+                      {item.type === "certificate" ? (
                         <Certificates item={item} />
                       ) : (
                         <div>Need to create new component type.</div>
@@ -168,11 +164,7 @@ const RightPanel = ({ section }: { section: string }) => {
                       key={item.title + item.type + index}
                       size={item.layout}
                     >
-                      {item.type === "lor" ? (
-                        <Social item={item} />
-                      ) : item.type === "hackathon" ? (
-                        <Mentor item={item} />
-                      ) : item.type === "certificate" ? (
+                      {item.type === "certificate" ? (
                         <Certificates item={item} />
                       ) : (
                         <div>Need to create new component type.</div>
@@ -193,7 +185,7 @@ const RightPanel = ({ section }: { section: string }) => {
             className="w-full grid-cols-4 xl:gap-10 gap-6 xl:py-10 py-6 xl:px-2 xl:overflow-y-auto auto-rows-[75px]"
           >
             <div className="mb-4 ml-4 mt-4 flex items-center border-neutral-100 dark:border-neutral-800 cursor-pointer">
-              <motion.div whileHover={{ scale: 1.1 }}>
+              <motion.div whileHover={{ scale: 1.03 }}>
                 <div className="shadow-md text-center justify-center w-full px-4 py-2 text-sm font-medium border border-neutral-100 dark:border-neutral-800 flex items-center gap-1 rounded-lg p-1">
                   {returnCategory(IconTypes.SEARCH)}
                   {LeftPanelOptions.EASTEREGG}
@@ -204,7 +196,6 @@ const RightPanel = ({ section }: { section: string }) => {
           </div>
         </>
       )}
-
     </>
   );
 };
