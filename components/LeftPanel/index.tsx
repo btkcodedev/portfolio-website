@@ -22,7 +22,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.ABOUT}
             category={IconTypes.SEARCH}
-            href={`#${LeftPanelOptions.ABOUT}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}
@@ -30,7 +30,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.EXPERIENCE}
             category={IconTypes.ALBUM}
-            href={`#${LeftPanelOptions.EXPERIENCE}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}
@@ -38,7 +38,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.ACHIEVEMENTS}
             category={IconTypes.MEDAL}
-            href={`#${LeftPanelOptions.ACHIEVEMENTS}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}
@@ -46,7 +46,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.PROJECTS}
             category={IconTypes.PROJECTS}
-            href={`#${LeftPanelOptions.PROJECTS}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}

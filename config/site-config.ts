@@ -32,27 +32,27 @@ const ProjItems: ProjectItemInterface[] = [
   {
     layout: "2x4",
     type: "certificate",
-    title: "Portfolio you are looking at :P",
+    title: "Decentralized Drive",
     image: "/background.jpg",
     languages: [
       {
-        title: "Bento style",
+        title: "Solidity",
         link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "Easter Egg",
+        title: "Next.js",
         link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "Responsive screen grid architecture",
+        title: "Tailwind + TSX",
         link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "Vite + Tailwind + Firebase + TSX",
-        link: "#",
+        title: "Hardhat",
+        link: "/google.com",
         languageImage: "/name.jpg"
       }
     ],
