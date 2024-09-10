@@ -11,7 +11,7 @@ export enum LeftPanelOptions {
   EXPERIENCE = "Experience",
   ACHIEVEMENTS = "Achievements",
   PROJECTS = "Projects",
-  EASTEREGG = "EasterEgg"
+  EASTEREGG = "No dude, it is supposed to be hidden!! Means, a place that nobody finds out my favourite song??... Oh Jeez, now don't turn that volume up.. You dare",
 }
 
 export enum LanguageTitle {
@@ -22,9 +22,18 @@ export enum LanguageTitle {
   Django = "Django",
   YAML = "YAML",
   JACKIE = "Jackie Chan Movies",
+  TyAndPy = "Ty & Py",
+  Coffee = "Coffee",
+  Github = "Github",
 }
 
 export enum LanguageCode {
+  TyPy = `Typescript and Python...
+Lovely combo pack of katana swords ⚔️`,
+  Cofee = `Mornings are not fulfilled without... 
+Wait, Mornings... Afternoon... Evenings... Nights... Um.. Whatever ☕`,
+  Github = `A multiverse where every text change is sacred, and greeted 
+warmly with forks, and sometimes mercilessly squashed ⭐`,
   JavascriptHelloWorld = `const greetWithDelay = ms:number => 
   new Promise(resolve => setTimeout(
   () => resolve("Hello, World!"), ms));
@@ -41,6 +50,6 @@ export enum LanguageCode {
   def hello_world(request):
       return HttpResponse("Hello, World!")`,
   YAMLHelloWorld = `message: "Hello, World!"`,
-  JackieHelloWorld = `Born in Hong Kong, Already a Dragon :)
-  He is/was/will always the legend... <3`,
+  JackieHelloWorld = `Hong Kong Dude, Love the humour :)
+He is YU and I am ME, But YU is blind 🤸`,
 }

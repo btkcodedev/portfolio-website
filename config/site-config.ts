@@ -32,27 +32,27 @@ const ProjItems: ProjectItemInterface[] = [
   {
     layout: "2x4",
     type: "certificate",
-    title: "Portfolio you are looking at :P",
+    title: "Decentralized Drive",
     image: "/background.jpg",
     languages: [
       {
-        title: "Bento style",
+        title: "Solidity",
         link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "Easter Egg",
+        title: "Next.js",
         link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "Responsive screen grid architecture",
+        title: "Tailwind + TSX",
         link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "Vite + Tailwind + Firebase + TSX",
-        link: "#",
+        title: "Hardhat",
+        link: "/google.com",
         languageImage: "/name.jpg"
       }
     ],
@@ -358,24 +358,24 @@ const GridItems: GridItemInterface[] = [
     image: "/background.jpg",
     languages: [
       {
-        title: "Typescript",
+        title: "Ty & Py",
         link: "#",
-        languageImage: "/typescript.jpg"
+        languageImage: "/pyty.jpg"
       },
       {
-        title: "Python",
+        title: "Coffee",
         link: "#",
-        languageImage: "/python.jpg"
-      },
-      {
-        title: "Node.js",
-        link: "#",
-        languageImage: "/nodejs.jpg"
+        languageImage: "/coffee.jpg"
       },
       {
         title: "Jackie Chan Movies",
         link: "#",
         languageImage: "/jackie.jpg"
+      },
+      {
+        title: "Github",
+        link: "#",
+        languageImage: "/gh.jpg"
       },
     ],
   },

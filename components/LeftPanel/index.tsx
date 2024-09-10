@@ -22,7 +22,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.ABOUT}
             category={IconTypes.SEARCH}
-            href={`#${LeftPanelOptions.ABOUT}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}
@@ -30,7 +30,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.EXPERIENCE}
             category={IconTypes.ALBUM}
-            href={`#${LeftPanelOptions.EXPERIENCE}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}
@@ -38,7 +38,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.ACHIEVEMENTS}
             category={IconTypes.MEDAL}
-            href={`#${LeftPanelOptions.ACHIEVEMENTS}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}
@@ -46,7 +46,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <MiniButton
             buttonText={LeftPanelOptions.PROJECTS}
             category={IconTypes.PROJECTS}
-            href={`#${LeftPanelOptions.PROJECTS}`}
+            href={`#`}
             clickedCategory={clickedCategory}
             setClicked={setClicked}
             clicked={clicked}
@@ -54,11 +54,14 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
         </div>
 
         <div
-          className="hidden mt-6 xl:flex"
+          className="hidden mt-6 xl:flex cursor-pointer relative group"
           onClick={handleInteraction}
           onTouchStart={handleInteraction}
         >
-          <Footer/>
+          <Footer />
+          <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-sm rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Hidden element... SSSHHHHH...🤫
+          </span>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
-import { CombinedInterfaces, LanguageItem } from "@/components/Types";
+import { CombinedInterfaces } from "@/components/Types";
 import { motion } from "framer-motion";
 
-const Certificates = ({ item }: { item: CombinedInterfaces }) => {
+const Certificates = ({ item, handleClick }: { item: CombinedInterfaces, handleClick?: () => {} }) => {
   return (
     <motion.div
       className="w-full h-full relative flex items-end"
@@ -22,7 +22,11 @@ const Certificates = ({ item }: { item: CombinedInterfaces }) => {
                     className="relative inline-block"
                     whileHover={{ scale: 1.1 }}
                   >
-                    <div className="px-2 py-1 text-sm font-medium bg-white rounded-lg dark:bg-neutral-900 cursor-pointer">
+                    {/* TODO: handleclick to redirection */}
+                    <div
+                      className="px-2 py-1 text-sm font-medium bg-white rounded-lg dark:bg-neutral-900 cursor-pointer"
+                      onClick={handleClick}
+                    >
                       {language.title}
                       <motion.span
                         className="absolute top-0 left-0 bg-white rounded-full opacity-50"
