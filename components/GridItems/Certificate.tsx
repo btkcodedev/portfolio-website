@@ -18,14 +18,16 @@ const Certificates = ({ item, handleClick }: { item: CombinedInterfaces, handleC
               {item.languages?.map((language, index) => {
                 return (
                   <motion.span
-                    key={language.link + index}
+                    key={(language.link ?? 'no-link') + index}
                     className="relative inline-block"
                     whileHover={{ scale: 1.1 }}
                   >
-                    {/* TODO: handleclick to redirection */}
-                    <div
-                      className="px-2 py-1 text-sm font-medium bg-white rounded-lg dark:bg-neutral-900 cursor-pointer"
-                      onClick={handleClick}
+                    <motion.a
+                      className="px-2 py-1 text-sm font-medium bg-white rounded-lg dark:bg-neutral-900 cursor-pointer relative inline-block"
+                      onClick={language.link ? handleClick : undefined}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      {...(language.link ? { href: language.link, target: "_blank" } : {})}
                     >
                       {language.title}
                       <motion.span
@@ -34,7 +36,7 @@ const Certificates = ({ item, handleClick }: { item: CombinedInterfaces, handleC
                         animate={{ scale: 2 }}
                         transition={{ duration: 0.5 }}
                       />
-                    </div>
+                    </motion.a>
                   </motion.span>
                 );
               })}

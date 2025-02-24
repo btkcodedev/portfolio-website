@@ -6,25 +6,25 @@ const ProjItems: ProjectItemInterface[] = [
     type: "certificate",
     title: "Open source contributions",
     image: "/background.jpg",
+    link: "https://github.com/btkcodedev",
     languages: [
       {
         title: "Airbyte",
-        link: "#",
+        link: "https://github.com/airbytehq/airbyte",
         languageImage: "/name.jpg"
       },
       {
         title: "MNE-Python",
-        link: "#",
+        link: "https://github.com/btkcodedev/mne-python",
         languageImage: "/name.jpg"
       },
       {
         title: "MindsDB Benchmarks",
-        link: "#",
+        link: "https://github.com/btkcodedev/benchmarks",
         languageImage: "/name.jpg"
       },
       {
         title: "Algorithms-Explanation ",
-        link: "#",
         languageImage: "/name.jpg"
       }
     ],
@@ -32,29 +32,47 @@ const ProjItems: ProjectItemInterface[] = [
   {
     layout: "2x4",
     type: "certificate",
-    title: "Decentralized Drive",
+    title: "ElevateYourSoul - Mental wellness platform",
     image: "/background.jpg",
+    link: "https://elevateyoursoul.web.app/",
     languages: [
       {
-        title: "Solidity",
-        link: "#",
+        title: "Vite + React",
         languageImage: "/name.jpg"
       },
       {
-        title: "Next.js",
-        link: "#",
+        title: "Zustand",
         languageImage: "/name.jpg"
       },
       {
         title: "Tailwind + TSX",
-        link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "Hardhat",
-        link: "/google.com",
+        title: "CI/CD",
         languageImage: "/name.jpg"
       }
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Analysr - Review Analytics platform",
+    image: "/background.jpg",
+    link: "https://growwithanalysr.web.app/",
+    languages: [
+      {
+        title: "Groq AI",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "Vite + React.TS + Tailwind CSS",
+        languageImage: "/name.jpg"
+      },
+      {
+        title: "MotherDuck",
+        languageImage: "/name.jpg"
+      },
     ],
   },
   {
@@ -62,20 +80,20 @@ const ProjItems: ProjectItemInterface[] = [
     type: "certificate",
     title: "Jobify",
     image: "/background.jpg",
+    link: "https://github.com/btkcodedev/jobify",
     languages: [
       {
         title: "Jobify-backend scrapes jobs",
-        link: "#",
+        link: "https://github.com/btkcodedev/jobify-scraper",
         languageImage: "/name.jpg"
       },
       {
         title: "Jobify-frontend displays jobs",
-        link: "#",
+        link: "https://github.com/btkcodedev/jobify-frontend/",
         languageImage: "/name.jpg"
       },
       {
         title: "Both are connected in github workflows",
-        link: "#",
         languageImage: "/name.jpg"
       },
     ],
@@ -85,20 +103,20 @@ const ProjItems: ProjectItemInterface[] = [
     type: "certificate",
     title: "Niche App developer + ML developer... Does that count?",
     image: "/background.jpg",
+    link: "https://github.com/btkcodedev",
     languages: [
       {
         title: "QR code generator App",
-        link: "#",
+        link: "https://github.com/btkcodedev/qr-native",
         languageImage: "/javascript.jpg"
       },
       {
         title: "ML Projects IPY notebook",
-        link: "#",
+        link: "https://github.com/btkcodedev/ml-projects",
         languageImage: "/python.jpg"
       },
       {
         title: "and a long way to go......",
-        link: "#",
         languageImage: "/nodejs.jpg"
       },
     ],
@@ -113,23 +131,19 @@ const ExpItems: ExperienceItemInterface[] = [
     image: "/background.jpg",
     languages: [
       {
-        title: "Handled client projects - E-commerce giants who signed NDA, ssshh...",
-        link: "#",
+        title: "Managed client projects for top e-commerce giants under NDA—hush-hush!",
         languageImage: "/name.jpg"
       },
       {
-        title: "Internal projects - Worklog tracking web app, Video Chat web app",
-        link: "#",
+        title: "Internal projects – Worklog tracking web app, Video chat web app",
         languageImage: "/name.jpg"
       },
       {
         title: "Component test suite development",
-        link: "#",
         languageImage: "/name.jpg"
       },
       {
         title: "Slides and Documentation development",
-        link: "#",
         languageImage: "/name.jpg"
       }
     ],
@@ -142,7 +156,6 @@ const ExpItems: ExperienceItemInterface[] = [
     languages: [
       {
         title: "'Hired' as a lovable contributor - Its mutual <3",
-        link: "#",
         languageImage: "/name.jpg"
       },
       {
@@ -152,12 +165,10 @@ const ExpItems: ExperienceItemInterface[] = [
       },
       {
         title: "25+ new connector contributions to pipeline",
-        link: "#",
         languageImage: "/name.jpg"
       },
       {
         title: "40+ bugs fixed till now",
-        link: "#",
         languageImage: "/name.jpg"
       }
     ],
@@ -170,12 +181,12 @@ const ExpItems: ExperienceItemInterface[] = [
     languages: [
       {
         title: "Golden & Silver badges along with completion of six month tenure",
-        link: "#",
+        link: "https://badgr.com/public/assertions/t9jtgQhXTUuLGO4DZo2m8Q",
         languageImage: "/name.jpg"
       },
       {
         title: "LOR from CEO!!!",
-        link: "#",
+        link: "https://drive.google.com/file/d/19ujGsrZMmv38R0JGPy1nGdZNb2AM68lc/view?usp=sharing",
         languageImage: "/name.jpg"
       },
       {
@@ -193,17 +204,16 @@ const ExpItems: ExperienceItemInterface[] = [
     languages: [
       {
         title: "Hands on AWS & GCP",
-        link: "#",
+        link: "https://www.cloudskillsboost.google/public_profiles/aee4fd0f-d8b1-402d-ad12-9bac68a25ee1",
         languageImage: "/javascript.jpg"
       },
       {
         title: "CLI access, cluster, load-balancer creation experience",
-        link: "#",
         languageImage: "/python.jpg"
       },
       {
         title: "Final assesment passed with A+ grade",
-        link: "#",
+        link: "https://drive.google.com/file/d/1TaJ9VeyNAydu6K8mZ1QBrpQvrTZq4Ln_/view?usp=sharing",
         languageImage: "/nodejs.jpg"
       },
     ],
@@ -313,6 +323,52 @@ const AchItems: AchievementItemInterface[] = [
       },
     ],
   },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Hackathon Participant",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "COCON 2020 Red Team CTF",
+        link: "https://drive.google.com/file/d/1UMMq1xuG3zF5522B04neD_iO4GPW3dF4/view?usp=sharing",
+        languageImage: "/javascript.jpg"
+      },
+      {
+        title: "HackNagpur Community Hackathon",
+        link: "https://drive.google.com/file/d/1Vs8hqT_bp0yF-QnTynRa8KyVFPSBV1DJ/view?usp=sharing",
+        languageImage: "/python.jpg"
+      },
+      {
+        title: "FoSS OpenHACK 20202 Participant",
+        link: "https://drive.google.com/file/d/1BUCzPJ8nTYxLivpEDb2Pp6UtOtJ94H6W/view?usp=sharing",
+        languageImage: "/nodejs.jpg"
+      },
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Outside the box niches",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Guiness World Record (Group) Participant",
+        link: "https://drive.google.com/file/d/1PllY7KSb9JE-IDoImO7wU398Rq_me9vF/view?usp=sharing",
+        languageImage: "/javascript.jpg"
+      },
+      {
+        title: "Alison Machine Learining Diploma Holder",
+        link: "https://drive.google.com/file/d/1m-zFWemwCaEdFwC9nE6OS5h60rd6PchC/view?usp=sharing",
+        languageImage: "/python.jpg"
+      },
+      {
+        title: "MLH Local Hack Day Participant",
+        link: "https://drive.google.com/file/d/17VO2dv3nDzSQgS-ZKSIM0r_dSlzCjj9M/view?usp=sharing",
+        languageImage: "/nodejs.jpg"
+      },
+    ],
+  },  
 ]
 
 const GridItems: GridItemInterface[] = [
@@ -393,16 +449,29 @@ const GridItems: GridItemInterface[] = [
       "Probe looking for wonders around! Supporter for ELT & Web applications",
   },
   {
-    layout: "2x2",
+    layout: "1x2",
     type: "social",
     title: "Youtube",
     icon: "youtube",
-    username: "@btkcodedev",
+    username: "@btkcodes",
     description:
-      "ELT, Web development enthusiast, JavaScript & Python lover",
+      "Music, ELT, Web development enthusiast",
     color: "#FF0000",
     buttonTitle: "Subscribe",
-    buttonLink: "https://www.youtube.com/@btkcodedev",
+    buttonLink: "https://www.youtube.com/@btkcodes",
+    buttonSecondaryText: "",
+  },
+  {
+    layout: "1x2",
+    type: "social",
+    title: "Buy Me A Coffee",
+    icon: "buymeacoffee",
+    username: "btkcodedev",
+    description:
+      "If you love any of my works, please consider supporting by buying me a coffee",
+    color: "#FFBB00",
+    buttonTitle: "Coffee!!",
+    buttonLink: "https://buymeacoffee.com/btkcodedev",
     buttonSecondaryText: "",
   },
   {

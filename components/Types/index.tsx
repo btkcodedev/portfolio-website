@@ -25,7 +25,7 @@ export type GridItemType = "social" | "language" | "mentor" | "project";
 export type AchievementItemType = "lor" | "hackathon" | "certificate" ;
 export type LanguageItem = {
   title: string;
-  link: string;
+  link?: string;
   languageImage: string;
 };
 
@@ -48,6 +48,7 @@ export interface BaseItemInterface {
   buttonColor?: string;
   intermediateText?: string;
   reach?: string;
+  link?: string,
 }
 
 export interface GridItemInterface extends BaseItemInterface {}
