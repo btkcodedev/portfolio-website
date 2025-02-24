@@ -229,22 +229,18 @@ const AchItems: AchievementItemInterface[] = [
     languages: [
       {
         title: "Best Outgoing Student",
-        link: "#",
         languageImage: "/name.jpg"
       },
       {
         title: "Department Topper",
-        link: "#",
         languageImage: "/name.jpg"
       },
       {
         title: "Mathematics Topper",
-        link: "#",
         languageImage: "/name.jpg"
       },
       {
         title: "Best Final Year Project",
-        link: "#",
         languageImage: "/name.jpg"
       }
     ],
@@ -257,17 +253,17 @@ const AchItems: AchievementItemInterface[] = [
     languages: [
       {
         title: "Letter Of Recommendation From Tinkerhub CEO",
-        link: "#",
+        link: "https://drive.google.com/file/d/19ujGsrZMmv38R0JGPy1nGdZNb2AM68lc/view?usp=sharing",
         languageImage: "/name.jpg"
       },
       {
         title: "Golden Badge",
-        link: "#",
+        link: "https://badgr.com/public/assertions/t9jtgQhXTUuLGO4DZo2m8Q",
         languageImage: "/name.jpg"
       },
       {
         title: "Silver Badge",
-        link: "#",
+        link: "https://badgr.com/public/assertions/pGqqI_65QDiUITeWUoUyyA",
         languageImage: "/name.jpg"
       },
       {
@@ -280,22 +276,27 @@ const AchItems: AchievementItemInterface[] = [
   {
     layout: "2x4",
     type: "certificate",
-    title: "Airbyte Hackathon Winner - Hattrick win",
+    title: "Airbyte Hackathon Winner - Quadruple win",
     image: "/background.jpg",
     languages: [
       {
+        title: "Motherduck x Airbyte | Decemeber 2024",
+        link: "https://airbyte.com/blog/and-the-winner-of-the-airbyte-motherduck-hackathon-is",
+        languageImage: "/name.jpg"
+      },
+      {
         title: "PyAirbyte Hackathon | August 2024",
-        link: "#",
+        link: "https://airbyte.com/blog/announcing-pyairbyte-hackathon-winners",
         languageImage: "/name.jpg"
       },
       {
         title: "Hashnode x Airbyte | October 2023",
-        link: "#",
+        link: "https://airbyte.com/blog/announcing-airbyte-hashnode-hackathon-winners",
         languageImage: "/name.jpg"
       },
       {
         title: "Connector Migration | August 2023",
-        link: "#",
+        link: "https://airbyte.com/blog/announcing-august-hackathon-winners",
         languageImage: "/name.jpg"
       },
     ],
@@ -308,17 +309,17 @@ const AchItems: AchievementItemInterface[] = [
     languages: [
       {
         title: "IBM Cybersecurity Analyst Professional",
-        link: "#",
+        link: "https://coursera.org/share/5223d1431a3e92c1f25c6fa23caad1e0",
         languageImage: "/javascript.jpg"
       },
       {
         title: "Google IT Automation Professional",
-        link: "#",
+        link: "https://coursera.org/share/94a3a025feffc8428c86e3744948b7f5",
         languageImage: "/python.jpg"
       },
       {
         title: "Google IT Support Professional",
-        link: "#",
+        link: "https://coursera.org/share/ee8a575115e3524413c1082d1e8ee6df",
         languageImage: "/nodejs.jpg"
       },
     ],
@@ -363,8 +364,8 @@ const AchItems: AchievementItemInterface[] = [
         languageImage: "/python.jpg"
       },
       {
-        title: "MLH Local Hack Day Participant",
-        link: "https://drive.google.com/file/d/17VO2dv3nDzSQgS-ZKSIM0r_dSlzCjj9M/view?usp=sharing",
+        title: "Hacktoberfest 2020, 2021, 2022, Participant (The t-shirts were so cool, sorry to newbies)",
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:6745980231259164672/",
         languageImage: "/nodejs.jpg"
       },
     ],

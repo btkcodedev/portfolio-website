@@ -97,7 +97,7 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
               {item.languages?.map((language, index) => {
                 return (
                   <motion.span
-                    key={language.link + index}
+                    key={(language.link ?? "default-link") + index}
                     className="relative inline-block"
                     whileHover={{ scale: 1.1 }}
                   >
