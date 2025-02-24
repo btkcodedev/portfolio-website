@@ -327,7 +327,7 @@ const AchItems: AchievementItemInterface[] = [
   {
     layout: "2x4",
     type: "certificate",
-    title: "Hackathon Participant",
+    title: "Community Workshops",
     image: "/background.jpg",
     languages: [
       {
@@ -341,7 +341,7 @@ const AchItems: AchievementItemInterface[] = [
         languageImage: "/python.jpg"
       },
       {
-        title: "FoSS OpenHACK 20202 Participant",
+        title: "FoSS OpenHack 2020 Participant",
         link: "https://drive.google.com/file/d/1BUCzPJ8nTYxLivpEDb2Pp6UtOtJ94H6W/view?usp=sharing",
         languageImage: "/nodejs.jpg"
       },
