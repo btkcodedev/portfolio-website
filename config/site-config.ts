@@ -391,7 +391,7 @@ const GridItems: GridItemInterface[] = [
     icon: "discord",
     username: "@btkcodedev",
     buttonTitle: "Join",
-    buttonLink: "https://discord.com/channels/@me",
+    buttonLink: "https://discord.com/channels/btkcodedev",
     buttonSecondaryText: "",
     color: "#5865F2",
   },
