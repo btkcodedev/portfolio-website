@@ -155,7 +155,7 @@ const ExpItems: ExperienceItemInterface[] = [
     image: "/background.jpg",
     languages: [
       {
-        title: "OG lovable Contributor – The Feeling is Mutual ❤️",
+        title: "OG lovable contributor – The feeling is mutual ❤️",
         languageImage: "/name.jpg"
       },
       {
