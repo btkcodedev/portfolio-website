@@ -68,10 +68,10 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
         {displayText.length > 0 && (
           <div className="flex items-start w-full h-full overflow-hidden p-8 justify-start align-center">
             <motion.div
-              className="z-10 bg-white dark:bg-neutral-900 flex items-start p-3 text-sm font-medium text-black dark:text-white h-16 rounded-lg w-full"
+              className="z-10 bg-white dark:bg-neutral-900 flex items-start p-3 text-sm font-medium text-black dark:text-white md:h-16 rounded-lg w-full"
               initial={{ opacity: 0.5 }}
               animate={{ opacity: 0.9 }}
-              style={{ whiteSpace: "pre" }}
+              style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}
             >
               <motion.span className="typing-text">{displayText}</motion.span>
             </motion.div>
