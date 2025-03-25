@@ -155,20 +155,20 @@ const ExpItems: ExperienceItemInterface[] = [
     image: "/background.jpg",
     languages: [
       {
-        title: "'Hired' as a lovable contributor - Its mutual <3",
+        title: "OG lovable contributor – The feeling is mutual ❤️",
         languageImage: "/name.jpg"
       },
       {
-        title: "Triple hackathon win",
+        title: "Quadruple hackathon win",
         link: "#",
         languageImage: "/name.jpg"
       },
       {
-        title: "25+ new connector contributions to pipeline",
+        title: "40+ new connector contributions to pipeline",
         languageImage: "/name.jpg"
       },
       {
-        title: "40+ bugs fixed till now",
+        title: "Over 100+ merged features & bug fixes",
         languageImage: "/name.jpg"
       }
     ],
