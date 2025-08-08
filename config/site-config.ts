@@ -127,7 +127,7 @@ const ExpItems: ExperienceItemInterface[] = [
   {
     layout: "2x4",
     type: "certificate",
-    title: "Software Engineer @ QBurst",
+    title: "Senior Software Engineer @ QBurst",
     image: "/background.jpg",
     languages: [
       {
@@ -402,7 +402,7 @@ const GridItems: GridItemInterface[] = [
     icon: "linkedin",
     username: "@b-t-k",
     description:
-      "Professional software developer, Freelance web developer & Data warehouse enthusiast",
+      "Senior software engineer, Freelance web developer & Data warehouse enthusiast",
     color: "#0a66c2",
     buttonTitle: "Follow",
     buttonLink: "https://www.linkedin.com/in/b-t-k/",

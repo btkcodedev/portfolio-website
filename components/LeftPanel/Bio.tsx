@@ -14,10 +14,10 @@ const Bio = () => {
           loading="eager"
           alt="Avatar"
           placeholder="blur"
-          src="/profile.png"
+          src="/profile.jpg"
           width={120}
           height={120}
-          blurDataURL="/profile.png"
+          blurDataURL="/profile.jpg"
           style={{
             borderRadius: "50%",
             border: "0.1px solid transparent",
