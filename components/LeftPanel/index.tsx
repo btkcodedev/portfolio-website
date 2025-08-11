@@ -95,7 +95,6 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
       >
         <div>
           <Bio />
-          <div className="border-b xl:mb-8 xl:mt-8 mt-8" />
           <div className="border-neutral-100 dark:border-neutral-800">
             {menuItems.map((item, index) => (
               <motion.div
