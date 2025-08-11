@@ -88,7 +88,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
       </motion.div>
 
       <motion.div 
-        className="hidden xl:flex flex-col justify-between py-6 xl:max-w-sm xl:py-10 xl:h-full"
+        className="hidden xl:flex flex-col justify-between py-6 xl:max-w-sm xl:py-8 xl:h-full"
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
