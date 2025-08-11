@@ -71,7 +71,6 @@ const RightPanel = ({ section }: { section: string }) => {
       {section === LeftPanelOptions.EXPERIENCE && (
         <>
           <div className="relative">
-            {/* Mobile Screens */}
             <div className="block xl:hidden">
               <div
                 ref={scope}
@@ -104,8 +103,7 @@ const RightPanel = ({ section }: { section: string }) => {
               </div>
             </div>
 
-            {/* Desktop Screens */}
-            <div className="hidden xl:block w-full overflow-y-auto py-10 relative">
+            <div className="hidden xl:block w-full overflow-y-auto max-h-[calc(100vh-20px)] pt-10 relative">
               <div className="absolute inset-0 left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 dark:bg-neutral-800 z-0" style={{ height: "110vh" }}></div>
               <div className="space-y-20 px-8">
                 <div className="ml-4 mt-2 flex items-center border-neutral-100 dark:border-neutral-800 cursor-pointer" style={{ marginBottom: "-4rem" }}>
@@ -122,7 +120,6 @@ const RightPanel = ({ section }: { section: string }) => {
                     className={`relative flex ${index % 2 === 0 ? "justify-start" : "justify-end"
                       }`}
                   >
-                    {/* Circle Indicator */}
                     <div
                       className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-2 rounded-full bg-transparent border-4 border-blue-500 z-10 ${index % 2 === 0 ? "top-1/2" : "bottom-1/2"
                         }`}
@@ -130,10 +127,9 @@ const RightPanel = ({ section }: { section: string }) => {
                         boxShadow: `0 0 10px rgba(59, 130, 246, 0.6)`,
                       }}
                     ></div>
-                    {/* Content Block */}
                     <div
                       className={`relative w-1/2 ${index % 2 === 0 ? "pl-8 text-left" : "pr-8 text-right"
-                        }`}// side margins
+                        }`}
                       style={{
                         marginLeft: index % 2 === 0 ? "-2rem" : "2rem",
                         marginRight: index % 2 === 0 ? "2rem" : "-2rem",
@@ -150,7 +146,6 @@ const RightPanel = ({ section }: { section: string }) => {
                         </div>
                       </motion.div>
                     </div>
-                    {/* For info */}
                     {/* <div
                       className={`relative w-1/2 ${
                         index % 2 === 0 ? "pl-8 text-left" : "pr-8 text-right"
