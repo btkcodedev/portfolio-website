@@ -10,7 +10,7 @@ import { FiMenu, FiX, FiChevronLeft } from "react-icons/fi";
 
 const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
   const [clicked, setClicked] = useState(LeftPanelOptions.ABOUT);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [dragProgress, setDragProgress] = useState(0);
   const constraintsRef = useRef(null);
 
