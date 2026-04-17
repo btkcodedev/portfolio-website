@@ -11,7 +11,7 @@ export enum LeftPanelOptions {
   EXPERIENCE = "Experience",
   ACHIEVEMENTS = "Achievements",
   PROJECTS = "Projects",
-  EASTEREGG = "No dude, it is supposed to be hidden!! Means, a place that nobody finds out my favourite song??... Oh Jeez, now don't turn that volume up.. You dare",
+  EASTEREGG = "No dude, it is supposed to be hidden!! Means, a place that nobody finds out my favourite playlist??..AJR.. Oh Jeez, now don't turn that volume up.. You dare",
 }
 
 export enum LanguageTitle {

@@ -2,17 +2,26 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 interface KnobProps {
   audioSrc?: string;
+  spotifyFallback?: string;
 }
 
-const Knob: React.FC<KnobProps> = ({ audioSrc = "https://www.cineblueone.com/maskWall/audio/skylar.mp3" }) => {
+const SPOTIFY_EMBED = "https://open.spotify.com/embed/track/7t8KM7hbYYZKlemuGnlJrC";
+
+const Knob: React.FC<KnobProps> = ({
+  audioSrc = "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/e6/4d/b5e64d6c-4cee-14ae-77db-7bacef037b1f/mzaf_14049349036684442387.plus.aac.p.m4a",
+  spotifyFallback = SPOTIFY_EMBED,
+}) => {
   const [volume, setVolume] = useState<number>(0);
   const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [audioError, setAudioError] = useState<boolean>(false);
   const knobRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
+    setAudioError(false);
     audioRef.current = new Audio(audioSrc);
     audioRef.current.volume = 0;
+    audioRef.current.onerror = () => setAudioError(true);
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
@@ -88,6 +97,24 @@ const Knob: React.FC<KnobProps> = ({ audioSrc = "https://www.cineblueone.com/mas
 
   const knobRotation = (volume / 100) * 270;
   const highlightedTicks = Math.round((volume * 2.7) / 10);
+
+  if (audioError && spotifyFallback) {
+    return (
+      <div className="grid-cols-4 w-full mt-8 px-4">
+        <p className="ml-4 mb-3 text-sm text-neutral-500">Primary preview unavailable — playing via Spotify:</p>
+        <iframe
+          style={{ borderRadius: '12px' }}
+          src={spotifyFallback}
+          width="100%"
+          height="152"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Spotify player"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="grid-cols-4 w-full mt-32">
