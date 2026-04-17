@@ -155,31 +155,10 @@ const ExpItems: ExperienceItemInterface[] = [
       },
     ],
   },
-    {
-    layout: "2x4",
-    type: "certificate",
-    title: "Freelancer @ Upwork",
-    image: "/background.jpg",
-    languages: [
-      {
-        title: "Top-rated freelance developer on Upwork",
-        link: "https://www.upwork.com/freelancers/~01a4448ef3472fb5fa",
-        languageImage: "/name.jpg",
-      },
-      {
-        title: "Full-stack web development & ELT pipeline projects",
-        languageImage: "/name.jpg",
-      },
-      {
-        title: "Client delivery across US & EU markets",
-        languageImage: "/name.jpg",
-      },
-    ],
-  },
   {
     layout: "2x4",
     type: "certificate",
-    title: "Contributor @ Expensify",
+    title: "Part-time contributor @ Expensify",
     image: "/background.jpg",
     languages: [
       {
@@ -242,6 +221,27 @@ const ExpItems: ExperienceItemInterface[] = [
       {
         title: "Technical writings and documentations",
         link: "https://paths.tinkerhub.org/react-native/",
+        languageImage: "/name.jpg",
+      },
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Freelancer @ Upwork",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Top-rated freelance developer on Upwork",
+        link: "https://www.upwork.com/freelancers/~01a4448ef3472fb5fa",
+        languageImage: "/name.jpg",
+      },
+      {
+        title: "Full-stack web development & ELT pipeline projects",
+        languageImage: "/name.jpg",
+      },
+      {
+        title: "Client delivery across US & EU markets",
         languageImage: "/name.jpg",
       },
     ],
