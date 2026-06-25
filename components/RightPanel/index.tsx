@@ -1,5 +1,4 @@
 "use client";
-import { siteConfig } from "@/config/site-config";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { useEffect } from "react";
 import GridItem from "@/components/common/GridItem";
@@ -11,8 +10,10 @@ import Knob from "../common/Knob";
 import { IconTypes, LeftPanelOptions } from "@/components/Types/enum";
 import { returnCategory } from "../Helpers";
 import Certificates from "@/components/GridItems/Certificate";
+import { useI18n } from "@/components/I18n";
 
 const RightPanel = ({ section }: { section: string }) => {
+  const { siteConfig } = useI18n();
   const [scope, animate] = useAnimate();
   const staggerGridItems = stagger(0.02, {
     startDelay: 0.5,

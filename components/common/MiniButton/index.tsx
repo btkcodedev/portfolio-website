@@ -2,6 +2,7 @@
 import { returnCategory } from "@/components/Helpers";
 import { MiniButtonProps } from "@/components/Types";
 import { LeftPanelOptions } from "@/components/Types/enum";
+import { useI18n } from "@/components/I18n";
 
 const MiniButton: React.FC<MiniButtonProps> = ({
   buttonText,
@@ -11,6 +12,7 @@ const MiniButton: React.FC<MiniButtonProps> = ({
   setClicked,
   clicked
 }) => {
+  const { t } = useI18n();
   const glowStyle =
     "from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 rounded-lg";
   return (
@@ -26,7 +28,7 @@ const MiniButton: React.FC<MiniButtonProps> = ({
         className="shadow-md flex items-center text-center justify-center w-full gap-2 px-4 py-2 text-sm font-medium border rounded-md border-neutral-100 dark:border-neutral-800"
       >
         {category ? returnCategory(category) : null}
-        {buttonText ? buttonText : ""}
+        {buttonText ? t(buttonText) : ""}
       </a>
     </div>
   );

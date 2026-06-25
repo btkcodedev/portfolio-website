@@ -1,34 +1,67 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
-interface KnobProps {
-  audioSrc?: string;
-  spotifyFallback?: string;
-}
+const SONGS = [
+  { title: 'A Dog Song', artist: 'AJR' },
+  { title: 'The Dumb Song', artist: 'AJR' },
+  { title: 'Bang!', artist: 'AJR' },
+  { title: 'The Good Part', artist: 'AJR' },
+];
 
-const SPOTIFY_EMBED = "https://open.spotify.com/embed/track/7t8KM7hbYYZKlemuGnlJrC";
-
-const Knob: React.FC<KnobProps> = ({
-  audioSrc = "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/e6/4d/b5e64d6c-4cee-14ae-77db-7bacef037b1f/mzaf_14049349036684442387.plus.aac.p.m4a",
-  spotifyFallback = SPOTIFY_EMBED,
-}) => {
-  const [volume, setVolume] = useState<number>(0);
+const Knob: React.FC = () => {
+  const [volume, setVolume] = useState<number>(50);
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const [audioError, setAudioError] = useState<boolean>(false);
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [previewUrl, setPreviewUrl] = useState('');
+  const [isPlaying, setIsPlaying] = useState(false);
   const knobRef = useRef<HTMLDivElement>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
-    setAudioError(false);
-    audioRef.current = new Audio(audioSrc);
-    audioRef.current.volume = 0;
-    audioRef.current.onerror = () => setAudioError(true);
+    const media = document.querySelectorAll<HTMLMediaElement>('audio, video');
+    media.forEach((item) => {
+      item.volume = volume / 100;
+      item.muted = volume === 0;
+    });
+  }, [volume]);
+
+  useEffect(() => {
+    let isMounted = true;
+    const song = SONGS[selectedIdx];
+
+    fetch(
+      `https://itunes.apple.com/search?term=${encodeURIComponent(`${song.title} ${song.artist}`)}&media=music&entity=song&limit=1`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (!isMounted) return;
+        setPreviewUrl(data.results?.[0]?.previewUrl ?? '');
+      })
+      .catch(() => {
+        if (isMounted) setPreviewUrl('');
+      });
+
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
+      isMounted = false;
     };
-  }, [audioSrc]);
+  }, [selectedIdx]);
+
+  useEffect(() => {
+    if (!audioRef.current || !previewUrl || !isPlaying) return;
+    audioRef.current.load();
+    audioRef.current.play().catch(() => setIsPlaying(false));
+  }, [previewUrl, isPlaying]);
+
+  const togglePlayback = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio || !previewUrl) return;
+
+    if (audio.paused) {
+      audio.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+    } else {
+      audio.pause();
+      setIsPlaying(false);
+    }
+  }, [previewUrl]);
 
   const createTicks = useCallback((numTicks: number, highlightNumTicks: number) => {
     return Array.from({ length: numTicks }, (_, i) => (
@@ -43,9 +76,6 @@ const Knob: React.FC<KnobProps> = ({
   const handleStart = useCallback((event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     event.preventDefault();
     setIsDragging(true);
-    if (audioRef.current?.paused) {
-      audioRef.current.play().catch(error => console.error("Audio playback failed", error));
-    }
   }, []);
 
   const handleEnd = useCallback(() => {
@@ -54,21 +84,17 @@ const Knob: React.FC<KnobProps> = ({
 
   const handleMove = useCallback((clientX: number, clientY: number) => {
     if (!isDragging || !knobRef.current) return;
-
     const knobRect = knobRef.current.getBoundingClientRect();
     const knobCenterX = knobRect.width / 2 + knobRect.left;
     const knobCenterY = knobRect.height / 2 + knobRect.top;
-
     const adjacentSide = knobCenterX - clientX;
     const oppositeSide = knobCenterY - clientY;
     const currentRadiansAngle = Math.atan2(adjacentSide, oppositeSide);
     const getRadiansInDegrees = (currentRadiansAngle * 180) / Math.PI;
-    let finalAngleInDegrees = -(getRadiansInDegrees - 135);
-
+    const finalAngleInDegrees = -(getRadiansInDegrees - 135);
     if (finalAngleInDegrees >= 0 && finalAngleInDegrees <= 270) {
       const volumeSetting = Math.floor(finalAngleInDegrees / (270 / 100));
       setVolume(volumeSetting);
-      if (audioRef.current) audioRef.current.volume = volumeSetting / 100;
     }
   }, [isDragging]);
 
@@ -81,12 +107,10 @@ const Knob: React.FC<KnobProps> = ({
         handleMove(clientX, clientY);
       }
     };
-
     document.addEventListener('mousemove', handleMoveWrapper);
     document.addEventListener('touchmove', handleMoveWrapper, { passive: false });
     document.addEventListener('mouseup', handleEnd);
     document.addEventListener('touchend', handleEnd);
-
     return () => {
       document.removeEventListener('mousemove', handleMoveWrapper);
       document.removeEventListener('touchmove', handleMoveWrapper);
@@ -98,37 +122,45 @@ const Knob: React.FC<KnobProps> = ({
   const knobRotation = (volume / 100) * 270;
   const highlightedTicks = Math.round((volume * 2.7) / 10);
 
-  if (audioError && spotifyFallback) {
-    return (
-      <div className="grid-cols-4 w-full mt-8 px-4">
-        <p className="ml-4 mb-3 text-sm text-neutral-500">Primary preview unavailable — playing via Spotify:</p>
-        <iframe
-          style={{ borderRadius: '12px' }}
-          src={spotifyFallback}
-          width="100%"
-          height="152"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          title="Spotify player"
-        />
-      </div>
-    );
-  }
-
   return (
-    <div className="grid-cols-4 w-full mt-32">
-      <p className="ml-8">
-        Current volume:
-        <span id="volumeValue" className="current-value">
+    <div className="grid-cols-4 w-full mt-8 px-4">
+      <div className="flex flex-wrap justify-center gap-2 mb-3">
+        {SONGS.map((song, i) => (
+          <button
+            key={song.title}
+            onClick={() => setSelectedIdx(i)}
+            className={`text-xs px-3 py-1 rounded-full transition-colors ${
+              selectedIdx === i
+                ? 'bg-green-500 text-white'
+                : 'bg-neutral-700 text-neutral-300 hover:bg-neutral-600'
+            }`}
+          >
+            {song.title}
+          </button>
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <audio ref={audioRef} src={previewUrl} loop />
+        <button
+          onClick={togglePlayback}
+          disabled={!previewUrl}
+          className="px-3 py-2 text-sm rounded-lg bg-green-500 text-white disabled:bg-neutral-700 disabled:text-neutral-400"
+        >
+          {isPlaying ? 'Pause' : previewUrl ? 'Play' : 'No Preview'}
+        </button>
+      </div>
+
+      <p className="mt-4 text-center">
+        Volume:
+        <span id="volumeValue" className="current-value ml-1">
           {volume}%
         </span>
       </p>
       <div className="knob-surround">
-        <div 
+        <div
           ref={knobRef}
-          id="knob" 
-          className="knob" 
+          id="knob"
+          className="knob"
           style={{ transform: `rotate(${knobRotation}deg)`, touchAction: 'none' }}
           onMouseDown={handleStart}
           onTouchStart={handleStart}

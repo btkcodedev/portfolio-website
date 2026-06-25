@@ -176,6 +176,27 @@ const ExpItems: ExperienceItemInterface[] = [
       },
     ],
   },
+    {
+    layout: "2x4",
+    type: "certificate",
+    title: "Part-time contributor @ ContactZilla",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Private repo contributions to Contactzilla core",
+        link: "https://contactzilla.com/",
+        languageImage: "/name.jpg",
+      },
+      {
+        title: "Bug fixes & feature improvements in 3000+ line YAML script",
+        languageImage: "/name.jpg",
+      },
+      {
+        title: "Collaborated with CEO and received good feedback",
+        languageImage: "/name.jpg",
+      },
+    ],
+  },
   {
     layout: "2x4",
     type: "certificate",
@@ -274,6 +295,57 @@ const AchItems: AchievementItemInterface[] = [
   {
     layout: "2x4",
     type: "certificate",
+    title: "Airbyte Hackathon Winner - Quadruple win",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "Motherduck x Airbyte | Decemeber 2024",
+        link: "https://airbyte.com/blog/and-the-winner-of-the-airbyte-motherduck-hackathon-is",
+        languageImage: "/name.jpg",
+      },
+      {
+        title: "PyAirbyte Hackathon | August 2024",
+        link: "https://airbyte.com/blog/announcing-pyairbyte-hackathon-winners",
+        languageImage: "/name.jpg",
+      },
+      {
+        title: "Hashnode x Airbyte | October 2023",
+        link: "https://airbyte.com/blog/announcing-airbyte-hashnode-hackathon-winners",
+        languageImage: "/name.jpg",
+      },
+      {
+        title: "Connector Migration | August 2023",
+        link: "https://airbyte.com/blog/announcing-august-hackathon-winners",
+        languageImage: "/name.jpg",
+      },
+    ],
+  },
+  {
+    layout: "2x4",
+    type: "certificate",
+    title: "Technical certificates",
+    image: "/background.jpg",
+    languages: [
+      {
+        title: "IBM Cybersecurity Analyst Professional",
+        link: "https://coursera.org/share/5223d1431a3e92c1f25c6fa23caad1e0",
+        languageImage: "/javascript.jpg",
+      },
+      {
+        title: "Google IT Automation Professional",
+        link: "https://coursera.org/share/94a3a025feffc8428c86e3744948b7f5",
+        languageImage: "/python.jpg",
+      },
+      {
+        title: "Google IT Support Professional",
+        link: "https://coursera.org/share/ee8a575115e3524413c1082d1e8ee6df",
+        languageImage: "/nodejs.jpg",
+      },
+    ],
+  },
+    {
+    layout: "2x4",
+    type: "certificate",
     title: "Bachelors Degree College Achievements",
     image: "/background.jpg",
     languages: [
@@ -320,57 +392,6 @@ const AchItems: AchievementItemInterface[] = [
         title: "Six months tenure completion",
         link: "",
         languageImage: "/name.jpg",
-      },
-    ],
-  },
-  {
-    layout: "2x4",
-    type: "certificate",
-    title: "Airbyte Hackathon Winner - Quadruple win",
-    image: "/background.jpg",
-    languages: [
-      {
-        title: "Motherduck x Airbyte | Decemeber 2024",
-        link: "https://airbyte.com/blog/and-the-winner-of-the-airbyte-motherduck-hackathon-is",
-        languageImage: "/name.jpg",
-      },
-      {
-        title: "PyAirbyte Hackathon | August 2024",
-        link: "https://airbyte.com/blog/announcing-pyairbyte-hackathon-winners",
-        languageImage: "/name.jpg",
-      },
-      {
-        title: "Hashnode x Airbyte | October 2023",
-        link: "https://airbyte.com/blog/announcing-airbyte-hashnode-hackathon-winners",
-        languageImage: "/name.jpg",
-      },
-      {
-        title: "Connector Migration | August 2023",
-        link: "https://airbyte.com/blog/announcing-august-hackathon-winners",
-        languageImage: "/name.jpg",
-      },
-    ],
-  },
-  {
-    layout: "2x4",
-    type: "certificate",
-    title: "Technical certificates",
-    image: "/background.jpg",
-    languages: [
-      {
-        title: "IBM Cybersecurity Analyst Professional",
-        link: "https://coursera.org/share/5223d1431a3e92c1f25c6fa23caad1e0",
-        languageImage: "/javascript.jpg",
-      },
-      {
-        title: "Google IT Automation Professional",
-        link: "https://coursera.org/share/94a3a025feffc8428c86e3744948b7f5",
-        languageImage: "/python.jpg",
-      },
-      {
-        title: "Google IT Support Professional",
-        link: "https://coursera.org/share/ee8a575115e3524413c1082d1e8ee6df",
-        languageImage: "/nodejs.jpg",
       },
     ],
   },
@@ -628,13 +649,14 @@ export const siteConfig = {
     title: "BTK Portfolio",
     description: "Portfolio website powered by Next.js, Tailwind CSS",
   },
-  creator: "Balasubramanian T K",
-  title: "Senior Software Engineer",
-  bio: "Web Developer & ELT Enthusiast, Competent with JavaScript and Python.",
-  location: "Kerala, India",
+  creator: "I am Bala",
+  title: "Hi!",
+  bio: "Senior SWE - ELT, Web, OSS Dev",
+  location: "Remote, India",
   locationLink: "https://maps.app.goo.gl/HTiGU32uhqhmVuBZ8",
   email: "btk.codedev@gmail.com",
-  footerText: `I am not Apple, so you could 'steal my work' (Hackintosh guys know this reference :P ), but karma always says to give credits`,
+  contactLabel: "Contact Me",
+  footerText: `Before you go... Please reach out if you have any Research Software Engineer Positions available. Very much interested :)`,
   aboutItems: GridItems,
   achievementItems: AchItems,
   experienceItems: ExpItems,

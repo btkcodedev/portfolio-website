@@ -77,7 +77,7 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
             </motion.div>
           </div>
         )}
-        <div className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl p-1">
+        <div className="relative flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl p-1">
           {/* Overlay */}
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/30 to-neutral-950/30" />
           {/* Image */}
@@ -86,11 +86,12 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
             src={image ?? ""}
             alt="languages"
             fill
+            priority={image === "/background.jpg"}
           />
 
           {/* Content */}
-          <div className="relative z-20 w-full p-4 space-y-3 md:p-8">
-            <div className="text-sm font-medium text-white mb-72">
+          <div className="relative z-20 flex h-full w-full flex-col justify-between p-4 md:p-8">
+            <div className="text-sm font-medium text-white drop-shadow">
               {item.title}
             </div>
             <div className="flex flex-wrap items-center gap-3">

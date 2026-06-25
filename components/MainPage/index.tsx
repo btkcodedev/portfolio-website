@@ -4,6 +4,7 @@ import LeftPanel from "@/components/LeftPanel";
 import RightPanel from "@/components/RightPanel";
 import { useState } from "react";
 import { LeftPanelOptions } from "../Types/enum";
+import { I18nProvider } from "@/components/I18n";
 
 export default function MainPage() {
   const [rightPanelCategory, setRightPanelCategory] = useState(
@@ -19,19 +20,21 @@ export default function MainPage() {
   };
 
   return (
-    <div className="container relative z-20 flex flex-col w-full h-full px-6 gap:6 xl:gap-10 xl:flex-row max-w-80 max-h-full">
-      <LeftPanel
-        clickedCategory={clickedCategory}
-        handleInteraction={handleInteraction}
-      />
-      <RightPanel section={rightPanelCategory} />
-      <div
-        className="flex pb-6 xl:hidden"
-        onClick={handleInteraction}
-        onTouchStart={handleInteraction}
-      >
-        <Footer />
+    <I18nProvider>
+      <div className="container relative z-20 flex flex-col w-full h-full px-6 gap:6 xl:gap-10 xl:flex-row max-w-80 max-h-full">
+        <LeftPanel
+          clickedCategory={clickedCategory}
+          handleInteraction={handleInteraction}
+        />
+        <RightPanel section={rightPanelCategory} />
+        <div
+          className="flex pb-6 xl:hidden"
+          onClick={handleInteraction}
+          onTouchStart={handleInteraction}
+        >
+          <Footer />
+        </div>
       </div>
-    </div>
+    </I18nProvider>
   );
 }

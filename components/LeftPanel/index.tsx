@@ -7,6 +7,7 @@ import { LeftPanelProps } from "@/components/Types";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { FiMenu, FiX, FiChevronLeft } from "react-icons/fi";
+import { siteConfig } from "@/config/site-config";
 
 const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
   const [clicked, setClicked] = useState(LeftPanelOptions.ABOUT);
@@ -23,6 +24,12 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
 
   const handleMenuClick = (item: LeftPanelOptions) => {
     setClicked(item);
+    setIsOpen(false);
+  };
+
+  const handleHiddenClick = (event: React.MouseEvent | React.TouchEvent) => {
+    handleInteraction(event);
+    setClicked(LeftPanelOptions.EASTEREGG);
     setIsOpen(false);
   };
 
@@ -136,7 +143,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <>
             {/* Backdrop */}
             <motion.div
-              className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm xl:hidden"
+              className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm xl:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -147,7 +154,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
             {/* Slide-out Panel */}
             <motion.div
               ref={constraintsRef}
-              className="fixed left-0 top-0 bottom-0 z-50 w-80 max-w-[85vw] xl:hidden"
+              className="fixed inset-0 z-50 w-screen xl:hidden"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
@@ -166,11 +173,11 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
                 x: dragProgress ? -dragProgress * 250 : 0
               }}
             >
-              <div className="h-full bg-white dark:bg-neutral-900 shadow-2xl border-r border-neutral-200 dark:border-neutral-700 flex flex-col">
+              <div className="h-full bg-white dark:bg-neutral-900 shadow-2xl flex flex-col">
                 {/* Header */}
                 <div className="flex items-center justify-between p-6 border-b border-neutral-200 dark:border-neutral-700 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-neutral-800 dark:to-neutral-800">
                   <h2 className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    Profile
+                    Intro
                   </h2>
                   <motion.button
                     onClick={closeMenu}
@@ -190,7 +197,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.1 }}
                   >
-                    <Bio />
+                    <Bio compact />
                   </motion.div>
                   
                   <div className="border-b my-6 border-neutral-200 dark:border-neutral-700" />
@@ -217,8 +224,8 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
 
                   <motion.div
                     className="mt-8 flex cursor-pointer relative group"
-                    onClick={handleInteraction}
-                    onTouchStart={handleInteraction}
+                    onClick={handleHiddenClick}
+                    onTouchStart={handleHiddenClick}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.4 }}
