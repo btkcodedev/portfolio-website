@@ -677,7 +677,7 @@ export const siteConfig = {
   locationLink: "https://maps.app.goo.gl/HTiGU32uhqhmVuBZ8",
   email: "btk.codedev@gmail.com",
   contactLabel: "Contact Me",
-  footerText: `Before you go... Please reach out if you have any Research Software Engineer Positions available. Very much interested :)`,
+  footerText: `Please reach out if you have any Research Software Engineer Positions available. Very much interested :)`,
   aboutItems: GridItems,
   achievementItems: AchItems,
   experienceItems: ExpItems,

@@ -310,7 +310,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
 
                   <div className="border-b my-6 border-neutral-200 dark:border-neutral-700" />
 
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1">
                     {menuItems.map((item, index) => (
                       <motion.div
                         key={item.text}

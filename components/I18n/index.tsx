@@ -15,8 +15,8 @@ const translations: Record<Language, Record<string, string>> = {
     "Senior SWE - ELT, Web, OSS Dev": "സീനിയർ SWE - ELT, വെബ്, OSS ഡെവ്",
     "Remote, India": "റിമോട്ട്, ഇന്ത്യ",
     "Contact Me": "ബന്ധപ്പെടുക",
-    "Before you go... Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
-      "പോകുന്നതിന് മുൻപ്... Research Software Engineer ഒഴിവുകൾ ഉണ്ടെങ്കിൽ പറയണം. വളരെ താൽപ്പര്യം :)",
+    "Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
+      "Research Software Engineer ഒഴിവുകൾ ഉണ്ടെങ്കിൽ പറയണം. വളരെ താൽപ്പര്യം :)",
     "Portfolio website powered by Next.js, Tailwind CSS":
       "Next.js, Tailwind CSS ഉപയോഗിച്ച് നിർമ്മിച്ച പോർട്ട്ഫോളിയോ വെബ്‌സൈറ്റ്",
     Github: "ഗിറ്റ്‌ഹബ്",
@@ -154,8 +154,8 @@ const translations: Record<Language, Record<string, string>> = {
     "Senior SWE - ELT, Web, OSS Dev": "高级软件工程师 - ELT、Web、开源开发",
     "Remote, India": "远程，印度",
     "Contact Me": "联系我",
-    "Before you go... Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
-      "在你离开前... 如果有研究软件工程师职位，请联系我。我非常感兴趣 :)",
+    "Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
+      "如果有研究软件工程师职位，请联系我。我非常感兴趣 :)",
     "Portfolio website powered by Next.js, Tailwind CSS":
       "由 Next.js 和 Tailwind CSS 驱动的作品集网站",
     "Github": "Github",
@@ -292,8 +292,8 @@ const translations: Record<Language, Record<string, string>> = {
     "Senior SWE - ELT, Web, OSS Dev": "シニアソフトウェアエンジニア - ELT、Web、OSS 開発",
     "Remote, India": "リモート、インド",
     "Contact Me": "連絡する",
-    "Before you go... Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
-      "行く前に... 研究ソフトウェアエンジニアの募集があればぜひ連絡してください。とても興味があります :)",
+    "Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
+      "研究ソフトウェアエンジニアの募集があればぜひ連絡してください。とても興味があります :)",
     "Portfolio website powered by Next.js, Tailwind CSS":
       "Next.js と Tailwind CSS で作られたポートフォリオサイト",
     "BTK Portfolio": "Bala のポートフォリオ",
@@ -431,8 +431,8 @@ const translations: Record<Language, Record<string, string>> = {
     "Senior SWE - ELT, Web, OSS Dev": "सीनियर SWE - ELT, वेब, OSS डेवलपमेंट",
     "Remote, India": "रिमोट, भारत",
     "Contact Me": "संपर्क करें",
-    "Before you go... Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
-      "जाने से पहले... अगर कोई Research Software Engineer पद उपलब्ध हो तो कृपया संपर्क करें। बहुत रुचि है :)",
+    "Please reach out if you have any Research Software Engineer Positions available. Very much interested :)":
+      "अगर कोई Research Software Engineer पद उपलब्ध हो तो कृपया संपर्क करें। बहुत रुचि है :)",
     "Portfolio website powered by Next.js, Tailwind CSS":
       "Next.js और Tailwind CSS से बना पोर्टफोलियो वेबसाइट",
     "BTK Portfolio": "बाला का पोर्टफोलियो",

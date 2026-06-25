@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const SONGS = [
-  { title: 'A Dog Song', artist: 'AJR' },
+  { title: 'The Trick', artist: 'AJR' },
   { title: 'The Dumb Song', artist: 'AJR' },
   { title: 'Bang!', artist: 'AJR' },
   { title: 'The Good Part', artist: 'AJR' },
