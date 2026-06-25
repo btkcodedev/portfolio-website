@@ -103,6 +103,12 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
   const [isOpen, setIsOpen] = useState(true);
   const [dragProgress, setDragProgress] = useState(0);
   const constraintsRef = useRef(null);
+  const mobileTitle =
+    clicked === LeftPanelOptions.ABOUT
+      ? "Portfolio"
+      : clicked === LeftPanelOptions.EASTEREGG
+        ? "EasterEgg"
+        : clicked;
 
   const menuItems = [
     { text: LeftPanelOptions.ABOUT, icon: IconTypes.SEARCH },
@@ -185,7 +191,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
         >
-          {clicked === LeftPanelOptions.ABOUT ? "Portfolio" : clicked}
+          {mobileTitle}
         </motion.h1>
       </motion.div>
 

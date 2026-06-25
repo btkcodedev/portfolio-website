@@ -124,6 +124,7 @@ const Bio = ({ compact = false }: { compact?: boolean }) => {
             {siteConfig.title}
           </div>
           <ThemeToggle />
+          <LanguageToggle />
         </div>
 
         <h1 className="mt-2 text-3xl font-bold">{siteConfig.creator}</h1>
