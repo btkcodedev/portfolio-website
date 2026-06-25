@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border border-white/15 bg-white/10 text-white/90 shadow-inner">
           <Sparkles size={11} />
         </div>
-        <div className="ml-2 text-xs text-neutral-300">{siteConfig.footerText}</div>
+        <div className="ml-2 text-xs dark:text-neutral-300 text-white-500">{siteConfig.footerText}</div>
       </div>
     </div>
   );
