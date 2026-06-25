@@ -642,6 +642,27 @@ const GridItems: GridItemInterface[] = [
   },
 ];
 
+const CurrentGoalItems = [
+  {
+    label: "My current goal",
+    title: "Neuro AI RSE career path",
+    description: "Build toward research software roles in neuro AI.",
+    color: "linear-gradient(135deg, #2563eb, #9333ea)",
+  },
+  {
+    label: "Now learning",
+    title: "Neuroscience tooling",
+    description: "MNE, signal workflows, reproducible analysis.",
+    color: "linear-gradient(135deg, #0891b2, #16a34a)",
+  },
+  {
+    label: "Next proof",
+    title: "Open-source research work",
+    description: "More useful commits, notebooks, and small tools.",
+    color: "linear-gradient(135deg, #ea580c, #db2777)",
+  },
+];
+
 export const currentYear = new Date().getFullYear();
 
 export const siteConfig = {
@@ -661,4 +682,5 @@ export const siteConfig = {
   achievementItems: AchItems,
   experienceItems: ExpItems,
   projectItems: ProjItems,
+  currentGoalItems: CurrentGoalItems,
 } as const;

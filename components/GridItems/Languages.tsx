@@ -64,11 +64,11 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <div className="flex flex-col w-full h-full overflow-hidden rounded-3xl">
+      <div className="relative flex h-full w-full overflow-hidden rounded-3xl">
         {displayText.length > 0 && (
-          <div className="flex items-start w-full h-full overflow-hidden p-8 justify-start align-center">
+          <div className="pointer-events-none absolute inset-x-0 top-0 z-30 p-4 md:p-8">
             <motion.div
-              className="z-10 bg-white dark:bg-neutral-900 flex items-start p-3 text-sm font-medium text-black dark:text-white md:h-16 rounded-lg w-full"
+              className="flex max-h-28 w-full items-start overflow-hidden rounded-lg bg-white p-3 text-sm font-medium text-black dark:bg-neutral-900 dark:text-white"
               initial={{ opacity: 0.5 }}
               animate={{ opacity: 0.9 }}
               style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}
@@ -77,7 +77,7 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
             </motion.div>
           </div>
         )}
-        <div className="relative flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl p-1">
+        <div className="relative flex h-full w-full flex-col items-end justify-end overflow-hidden rounded-3xl p-1">
           {/* Overlay */}
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/30 to-neutral-950/30" />
           {/* Image */}
