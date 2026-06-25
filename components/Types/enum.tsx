@@ -11,7 +11,7 @@ export enum LeftPanelOptions {
   EXPERIENCE = "Experience",
   ACHIEVEMENTS = "Achievements",
   PROJECTS = "Projects",
-  EASTEREGG = "No dude, it is supposed to be hidden!! So nobody finds out my favourite AJR playlist?? NOW, DON'T press play.. You dare",
+  EASTEREGG = "No dude, it is supposed to be hidden!! So nobody finds out my favourite AJR playlist?? If you are lucky itunes will allow to play preview in your region :)",
 }
 
 export enum LanguageTitle {
