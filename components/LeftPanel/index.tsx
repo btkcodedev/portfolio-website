@@ -7,7 +7,7 @@ import { LeftPanelProps } from "@/components/Types";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { FiMenu, FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { siteConfig } from "@/config/site-config";
+import { useI18n } from "@/components/I18n";
 
 const GoalCardStack = ({
   controls = false,
@@ -19,6 +19,7 @@ const GoalCardStack = ({
   swipeAxis?: "x" | "y";
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { siteConfig } = useI18n();
   const goals = siteConfig.currentGoalItems;
   const total = goals.length;
   const nextGoal = () => setActiveIndex((index) => (index + 1) % total);
