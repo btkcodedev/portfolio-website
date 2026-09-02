@@ -645,20 +645,20 @@ const GridItems: GridItemInterface[] = [
 const CurrentGoalItems = [
   {
     label: "My current goal",
-    title: "Neuro AI RSE career path",
-    description: "Build toward research software roles in neuro AI.",
+    title: "Scientific AI/SDK engineering roles",
+    description: "Build toward scientific platforms and developer SDK.",
     color: "linear-gradient(135deg, #2563eb, #9333ea)",
   },
   {
     label: "Now learning",
-    title: "Neuroscience tooling",
-    description: "MNE, signal workflows, reproducible analysis.",
+    title: "AI & SDK tooling",
+    description: "LLM APIs, agent frameworks, MCP, and eval harnesses.",
     color: "linear-gradient(135deg, #0891b2, #16a34a)",
   },
   {
     label: "Next proof",
-    title: "Open-source research work",
-    description: "More useful commits, notebooks, and small tools.",
+    title: "Opensource AI tooling",
+    description: "SDKs, integrations, and dev tools people actually use.",
     color: "linear-gradient(135deg, #ea580c, #db2777)",
   },
 ];
