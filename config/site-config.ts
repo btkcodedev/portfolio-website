@@ -176,7 +176,7 @@ const ExpItems: ExperienceItemInterface[] = [
       },
     ],
   },
-    {
+  {
     layout: "2x4",
     type: "certificate",
     title: "Part-time contributor @ ContactZilla",
@@ -343,7 +343,7 @@ const AchItems: AchievementItemInterface[] = [
       },
     ],
   },
-    {
+  {
     layout: "2x4",
     type: "certificate",
     title: "Bachelors Degree College Achievements",
@@ -574,18 +574,6 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "1x2",
     type: "social",
-    title: "Buy Me A Coffee",
-    icon: "buymeacoffee",
-    username: "btkcodedev",
-    description: "Buy a coffee!!!",
-    color: "#FFBB00",
-    buttonTitle: "Coffee!!",
-    buttonLink: "https://buymeacoffee.com/btkcodedev",
-    buttonSecondaryText: "",
-  },
-  {
-    layout: "1x2",
-    type: "social",
     title: "Ko-fi",
     icon: "kofi",
     username: "@btkcodedev",
@@ -608,19 +596,6 @@ const GridItems: GridItemInterface[] = [
     buttonColor: "#1DA1F2",
   },
   {
-    layout: "1x2",
-    type: "social",
-    title: "Google Cloud Profile",
-    icon: "gcp",
-    username: "@btkcodedev",
-    buttonTitle: "See my badges",
-    buttonSecondaryText: "",
-    buttonLink:
-      "https://www.cloudskillsboost.google/public_profiles/aee4fd0f-d8b1-402d-ad12-9bac68a25ee1",
-    color: "#ffffff",
-    buttonColor: "#1DA1F2",
-  },
-  {
     layout: "2x1",
     type: "mentor",
     title: "Medium",
@@ -639,6 +614,31 @@ const GridItems: GridItemInterface[] = [
     reach: "Competent",
     intermediateText: "Level",
     buttonLink: "https://www.hackerrank.com/profile/ibala_tk",
+  },
+  {
+    layout: "1x2",
+    type: "social",
+    title: "Google Cloud Profile",
+    icon: "gcp",
+    username: "@btkcodedev",
+    buttonTitle: "See my badges",
+    buttonSecondaryText: "",
+    buttonLink:
+      "https://www.cloudskillsboost.google/public_profiles/aee4fd0f-d8b1-402d-ad12-9bac68a25ee1",
+    color: "#ffffff",
+    buttonColor: "#1DA1F2",
+  },
+  {
+    layout: "1x2",
+    type: "social",
+    title: "Buy Me A Coffee",
+    icon: "buymeacoffee",
+    username: "btkcodedev",
+    description: "Buy a coffee!!!",
+    color: "#FFBB00",
+    buttonTitle: "Coffee!!",
+    buttonLink: "https://buymeacoffee.com/btkcodedev",
+    buttonSecondaryText: "",
   },
 ];
 
