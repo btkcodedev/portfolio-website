@@ -11,3 +11,12 @@ updates:
       interval: "weekly" # Update frequency, e.g., daily, weekly, monthly
     ignore:
       - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"] # ESLint's TypeScript parser still requires TypeScript 6.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"

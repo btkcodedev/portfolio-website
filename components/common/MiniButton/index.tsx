@@ -17,7 +17,7 @@ const MiniButton: React.FC<MiniButtonProps> = ({
     "from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 rounded-lg";
   return (
     <div
-      className={`flex items-center gap-3 mt-6 bg-gradient-to-r ${(clicked === buttonText) && glowStyle}`}
+      className={`flex items-center gap-3 mt-6 bg-linear-to-r/srgb ${(clicked === buttonText) && glowStyle}`}
     >
       <a
         href={href ? href : `#${category}`}

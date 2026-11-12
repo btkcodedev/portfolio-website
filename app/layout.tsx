@@ -40,7 +40,6 @@ const sfPRO = localFont({
 });
 
 export const metadata = {
-  title: siteConfig.metadata.title,
   description: siteConfig.metadata.description,
 };
 
@@ -51,7 +50,8 @@ export default function RootLayout({
 }) {
   return (
     <html className="h-full" lang="en" suppressHydrationWarning>
-      <body className={sfPRO.className}>
+      {/* Browser extensions can add attributes to the body before hydration. */}
+      <body className={sfPRO.className} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col h-full">{children}</div>
         </ThemeProvider>

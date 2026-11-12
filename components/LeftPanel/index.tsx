@@ -80,7 +80,7 @@ const GoalCardStack = ({
           <button
             type="button"
             onClick={prevGoal}
-            className="grid h-8 w-8 place-items-center rounded-lg border border-neutral-200 bg-white text-neutral-700 shadow-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+            className="grid h-8 w-8 place-items-center rounded-lg border border-neutral-200 bg-white text-neutral-700 shadow-xs dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
             aria-label="Previous goal"
           >
             <FiChevronLeft size={16} />
@@ -88,7 +88,7 @@ const GoalCardStack = ({
           <button
             type="button"
             onClick={nextGoal}
-            className="grid h-8 w-8 place-items-center rounded-lg border border-neutral-200 bg-white text-neutral-700 shadow-sm dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
+            className="grid h-8 w-8 place-items-center rounded-lg border border-neutral-200 bg-white text-neutral-700 shadow-xs dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100"
             aria-label="Next goal"
           >
             <FiChevronRight size={16} />
@@ -187,7 +187,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
         </motion.button>
 
         <motion.h1
-          className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          className="text-lg font-bold bg-linear-to-r/srgb from-blue-600 to-purple-600 bg-clip-text text-transparent"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
@@ -252,7 +252,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
           <>
             {/* Backdrop */}
             <motion.div
-              className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm xl:hidden"
+              className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs xl:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -284,8 +284,8 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
             >
               <div className="h-full bg-white dark:bg-neutral-900 shadow-2xl flex flex-col">
                 {/* Header */}
-                <div className="flex items-center justify-between p-6 border-b border-neutral-200 dark:border-neutral-700 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-neutral-800 dark:to-neutral-800">
-                  <h2 className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className="flex items-center justify-between p-6 border-b border-neutral-200 dark:border-neutral-700 bg-linear-to-r/srgb from-blue-50 to-purple-50 dark:from-neutral-800 dark:to-neutral-800">
+                  <h2 className="text-lg font-semibold bg-linear-to-r/srgb from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Intro
                   </h2>
                   <motion.button
@@ -357,7 +357,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
 
                 {/* Drag Hint */}
                 <motion.div
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 opacity-30 pointer-events-none"
+                  className="absolute right-4 top-1/2 [transform:translateY(-50%)] opacity-30 pointer-events-none"
                   animate={{
                     x: [0, -10, 0],
                     opacity: [0.3, 0.6, 0.3],
@@ -372,7 +372,7 @@ const LeftPanel = ({ clickedCategory, handleInteraction }: LeftPanelProps) => {
                 </motion.div>
 
                 <div
-                  className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-l-full transition-all duration-200"
+                  className="absolute right-0 top-0 bottom-0 w-1 bg-linear-to-b/srgb from-blue-500 to-purple-500 rounded-l-full transition-all duration-200"
                   style={{
                     opacity: dragProgress,
                     transform: `scaleY(${0.3 + dragProgress * 0.7})`,

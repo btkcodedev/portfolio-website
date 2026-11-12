@@ -22,17 +22,24 @@ const variants = cva(
   }
 );
 
-export type GridItemProps = { children: React.ReactNode } & VariantProps<
+export type GridItemProps = { children: React.ReactNode; index: number } & VariantProps<
   typeof variants
 >;
 
-const GridItem = ({ size, children }: GridItemProps) => {
+const GridItem = ({ size, index, children }: GridItemProps) => {
   return (
     <motion.div
       initial={{
         scale: 0.2,
         y: 120,
         opacity: 0,
+      }}
+      animate={{ scale: 1, y: 0, opacity: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 330,
+        damping: 35,
+        delay: 0.5 + index * 0.02,
       }}
       className={twMerge(clsx(
         variants({

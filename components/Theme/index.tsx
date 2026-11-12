@@ -1,6 +1,7 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
+import { Moon } from "@/components/common/Icon/portfolio-icons";
+import { Sun } from "lucide-react";
 import { useEffect } from "react";
 import { useTheme } from "next-themes";
 

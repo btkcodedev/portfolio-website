@@ -24,12 +24,12 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ item, index }) => {
       <div className={`w-5/12 ${isEven ? 'pr-8' : 'pl-8'}`}>
         <motion.div
           whileHover={{ scale: 1.03 }}
-          className="bg-gradient-to-br from-purple-600 to-pink-500 p-6 rounded-xl shadow-lg"
+          className="bg-linear-to-br/srgb from-purple-600 to-pink-500 p-6 rounded-xl shadow-lg"
         >
           <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
           <ul className="space-y-2">
             {item.details.map((detail, idx) => (
-              <li key={idx} className="text-white text-sm bg-black bg-opacity-20 rounded-lg p-2">
+              <li key={idx} className="text-white text-sm bg-black/20 rounded-lg p-2">
                 {detail}
               </li>
             ))}
@@ -48,7 +48,7 @@ const ImprovedTimeline: React.FC<ImprovedTimelineProps> = ({ experienceItems }) 
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="relative">
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-linear-to-b/srgb from-purple-500 to-pink-500"></div>
         {experienceItems.map((item, index) => (
           <TimelineItem key={`${item.title}-${index}`} item={item} index={index} />
         ))}

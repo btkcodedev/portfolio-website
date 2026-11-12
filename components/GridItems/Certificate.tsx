@@ -1,7 +1,15 @@
 import { CombinedInterfaces } from "@/components/Types";
 import { motion } from "framer-motion";
 
-const Certificates = ({ item, handleClick }: { item: CombinedInterfaces, handleClick?: () => {} }) => {
+const Certificates = ({
+  item,
+  cardLink,
+  handleClick,
+}: {
+  item: CombinedInterfaces;
+  cardLink?: string;
+  handleClick?: () => {};
+}) => {
   return (
     <motion.div
       className="w-full h-full relative flex items-end"
@@ -11,8 +19,17 @@ const Certificates = ({ item, handleClick }: { item: CombinedInterfaces, handleC
     >
       <div className="flex flex-col w-full h-full overflow-hidden rounded-3xl">
         <div className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl p-1">
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950/90" />
-          <div className="relative z-20 w-full p-4 space-y-3 md:p-8">
+          <div className="absolute inset-0 z-10 bg-linear-to-b/srgb from-transparent via-neutral-950/60 to-neutral-950/90" />
+          {cardLink && (
+            <a
+              className="absolute inset-0 z-10 rounded-3xl"
+              href={cardLink}
+              aria-label={item.title}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          )}
+          <div className={`relative z-20 w-full p-4 space-y-3 md:p-8 ${cardLink ? "pointer-events-none" : ""}`}>
             <div className="text-sm font-semibold text-white">{item.title}</div>
             <div className="flex flex-wrap items-center gap-3">
               {item.languages?.map((language, index) => {
@@ -23,7 +40,7 @@ const Certificates = ({ item, handleClick }: { item: CombinedInterfaces, handleC
                     whileHover={{ scale: 1.1 }}
                   >
                     <motion.a
-                      className="px-2 py-1 text-sm font-medium bg-white rounded-lg dark:bg-neutral-900 cursor-pointer relative inline-block"
+                      className={`px-2 py-1 text-sm font-medium bg-white rounded-lg dark:bg-neutral-900 cursor-pointer relative inline-block ${language.link ? "pointer-events-auto" : ""}`}
                       onClick={language.link ? handleClick : undefined}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

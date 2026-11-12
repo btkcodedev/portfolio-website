@@ -79,19 +79,19 @@ const Languages = ({ item }: { item: CombinedInterfaces }) => {
         )}
         <div className="relative flex h-full w-full flex-col items-end justify-end overflow-hidden rounded-3xl p-1">
           {/* Overlay */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/30 to-neutral-950/30" />
+          <div className="absolute inset-0 z-10 bg-linear-to-b/srgb from-transparent via-neutral-950/30 to-neutral-950/30" />
           {/* Image */}
           <Image
             className={`z-0 object-cover object-center w-full h-full`}
             src={image ?? ""}
             alt="languages"
             fill
-            priority={image === "/background.jpg"}
+            preload={image === "/background.jpg"}
           />
 
           {/* Content */}
           <div className="relative z-20 flex h-full w-full flex-col justify-between p-4 md:p-8">
-            <div className="text-sm font-medium text-white drop-shadow">
+            <div className="text-sm font-medium text-white drop-shadow-label">
               {item.title}
             </div>
             <div className="flex flex-wrap items-center gap-3">

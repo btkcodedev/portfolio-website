@@ -1,5 +1,5 @@
 "use client";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "@/components/common/Icon/portfolio-icons";
 import Image from "next/image";
 import { ThemeToggle } from "@/components/Theme";
 import RippleButton from "@/components/common/StyledLinkButton";
@@ -15,7 +15,7 @@ const Bio = ({ compact = false }: { compact?: boolean }) => {
         <div className="grid grid-cols-2 gap-3">
           <div className="flex flex-col items-center">
             <Image
-              priority
+              preload
               loading="eager"
               alt="Avatar"
               placeholder="blur"
@@ -28,7 +28,7 @@ const Bio = ({ compact = false }: { compact?: boolean }) => {
           </div>
 
           <div className="flex min-w-0 flex-col justify-center">
-            <p className="text-lg font-semibold leading-none bg-gradient-to-r from-orange-400 to-blue-500 bg-clip-text text-transparent">
+            <p className="text-lg font-semibold leading-none bg-linear-to-r/srgb from-orange-400 to-blue-500 bg-clip-text text-transparent">
               {siteConfig.title}
             </p>
             <h1 className="mt-3 text-3xl font-bold leading-tight">
@@ -61,7 +61,7 @@ const Bio = ({ compact = false }: { compact?: boolean }) => {
             whileHover={{ rotate: -1, scale: 1.05 }}
             transition={{ duration: 2.1, repeat: Infinity, ease: "easeInOut" }}
           >
-            <span className="block min-w-0 animate-pulse truncate bg-gradient-to-r from-blue-500 via-purple-500 to-orange-400 bg-clip-text text-transparent">
+            <span className="block min-w-0 animate-pulse truncate bg-linear-to-r/srgb from-blue-500 via-purple-500 to-orange-400 bg-clip-text text-transparent">
               {t("Nice to meet you")}
             </span>
           </motion.div>
@@ -92,10 +92,10 @@ const Bio = ({ compact = false }: { compact?: boolean }) => {
   }
 
   return (
-    <div className="shadow-md rounded-xl backdrop-filter backdrop-blur-lg bg-opacity-20 bg-white dark:bg-neutral-900 bg-opacity-10/80 border-opacity-50 p-6">
+    <div className="shadow-md rounded-xl backdrop-filter backdrop-blur-lg bg-white/20 dark:bg-neutral-900 p-6">
       <div>
         <Image
-          priority
+          preload
           loading="eager"
           alt="Avatar"
           placeholder="blur"

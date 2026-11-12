@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { IconTypes } from "../Types/enum";
-import { Search, Medal, Album, FolderGit2, Map } from "lucide-react";
+import { Medal } from "lucide-react";
+import { Album, FolderGit2, Map, Search } from "@/components/common/Icon/portfolio-icons";
 
 export const returnCategory = (category: IconTypes) => {
     let element: ReactElement = <></>;

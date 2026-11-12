@@ -21,7 +21,7 @@ export default function MainPage() {
 
   return (
     <I18nProvider>
-      <div className="container relative z-20 flex flex-col w-full h-full px-6 gap:6 xl:gap-10 xl:flex-row max-w-80 max-h-full">
+      <div className="container relative z-20 flex flex-col w-full h-full px-6 xl:gap-10 xl:flex-row max-h-full">
         <LeftPanel
           clickedCategory={clickedCategory}
           handleInteraction={handleInteraction}

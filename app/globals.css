@@ -1,8 +1,82 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+
+@source ".";
+@source "../components";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant hover (&:hover);
+@custom-variant group-hover (&:is(:where(.group):hover *));
+
+/* Keep the original Tailwind 3 palette where it is used by the site. */
+@theme {
+  --color-primary: #6178f1;
+  --color-youtube: #ff0000;
+  --color-twitter: #1da1f2;
+  --color-discord: #5865f2;
+  --color-github: #181717;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-800: #1f2937;
+  --color-blue-50: #eff6ff;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-purple-50: #faf5ff;
+  --color-purple-500: #a855f7;
+  --color-purple-600: #9333ea;
+  --color-orange-400: #fb923c;
+  --color-green-500: #22c55e;
+  --color-pink-500: #ec4899;
+  --font-sans: var(--font-sfpro);
+  --shadow-grid: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+@utility bg-light-pattern {
+  background-image: url('/light-pattern.svg');
+}
+
+@utility bg-dark-pattern {
+  background-image: url('/dark-pattern.svg');
+}
+
+@utility bg-very-small {
+  background-size: 0.5rem;
+}
+
+@utility drop-shadow-label {
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+@utility bg-page-wash {
+  --wash-opacity: 0.9;
+  background-image: linear-gradient(#fff, rgb(255 255 255 / var(--wash-opacity)), #fff);
+
+  @variant dark {
+    background-image: linear-gradient(#0a0a0a, rgb(10 10 10 / var(--wash-opacity)), #0a0a0a);
+  }
+}
 
 @layer base {
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  :disabled {
+    cursor: default;
+  }
+
   body {
     @apply h-full antialiased dark:bg-neutral-950 dark:text-neutral-50;
   }

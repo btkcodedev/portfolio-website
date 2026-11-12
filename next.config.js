@@ -2,6 +2,7 @@
 const nextConfig = {
   output: "export",
   images: { unoptimized: true },
+  agentRules: false,
   // async rewrites() {
   //   return [
   //     {

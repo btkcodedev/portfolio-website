@@ -1,39 +1,19 @@
-# Use the official Node.js 16 image as base
-FROM node:18 AS builder
-
-# Set the working directory inside the container
+FROM node:26.13.1-trixie-slim AS build
 WORKDIR /app
 
-# Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
+RUN npm install --global npm@12.2.2 && npm ci
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code
 COPY . .
+RUN npm run build && npm prune --omit=dev
 
-# Build the Next.js application
-RUN npm run build
-
-# Start a new stage from the base image
-FROM node:18-alpine
-
-# Set the working directory inside the container
+FROM node:26.13.1-trixie-slim
 WORKDIR /app
 
-# Copy the built application from the previous stage
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+ENV NODE_ENV=production
+COPY --from=build /app/out ./out
+COPY --from=build /app/node_modules ./node_modules
 
-# Install `next` globally (if not already installed)
-RUN npm install -g next
-
-# Expose the port Next.js app runs on
+USER node
 EXPOSE 3000
-
-# Set environment variables
-ENV NODE_ENV production
-
-# Command to run the Next.js application
-CMD ["npx", "serve@latest", "out"]
+CMD ["./node_modules/.bin/serve", "out"]

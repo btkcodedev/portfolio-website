@@ -23,9 +23,11 @@ This is my personal portfolio website, developed using Next.js, Tailwind CSS, an
 
 ## Usage
 1. Clone the repository: `git clone https://github.com/your-username/portfolio.git`
-2. Install dependencies: `npm install`
+2. Use Node.js from `.nvmrc` and npm 12.2.2. Install dependencies with `npm ci`.
 3. Run the development server: `npm run dev`
 4. Visit `http://localhost:3000` in your browser to view the website locally.
+
+Run `npm run lint` to check the source. `npm run build` checks the project with TypeScript 7 and writes the static site to `out`. TypeScript 6 also stays installed for the Next.js ESLint preset, whose parser still uses the TypeScript 6 compiler API. Serve the export locally with `npm start` or use `./run_app start` with Docker Compose.
 
 ## Deployment
 - The website is automatically deployed to Vercel and Firebase when changes are pushed to the `main` branch on GitHub.

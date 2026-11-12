@@ -2,13 +2,12 @@
 
 # Function to start Docker Compose
 start() {
-  docker-compose build
-  docker-compose up --no-recreate
+  docker compose up --build
 }
 
 # Function to stop Docker Compose
 stop() {
-  docker-compose down
+  docker compose down
 }
 
 # Check the command-line arguments

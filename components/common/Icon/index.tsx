@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 const Icons: {
   [key: string]: JSX.Element;
 } = {

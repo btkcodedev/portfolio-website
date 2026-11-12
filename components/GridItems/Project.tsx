@@ -1,5 +1,5 @@
 import { CombinedInterfaces } from "@/components/Types";
-import { Star } from "lucide-react";
+import { Star } from "@/components/common/Icon/portfolio-icons";
 import Link from "next/link";
 import Icon from "@/components/common/Icon";
 

@@ -11,7 +11,7 @@ const Knob: React.FC = () => {
   const [volume, setVolume] = useState<number>(50);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [selectedIdx, setSelectedIdx] = useState(0);
-  const [previewUrl, setPreviewUrl] = useState('');
+  const [previewUrl, setPreviewUrl] = useState<string>();
   const [isPlaying, setIsPlaying] = useState(false);
   const knobRef = useRef<HTMLDivElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -32,12 +32,15 @@ const Knob: React.FC = () => {
       `https://itunes.apple.com/search?term=${encodeURIComponent(`${song.title} ${song.artist}`)}&media=music&entity=song&limit=1`
     )
       .then((res) => res.json())
-      .then((data) => {
+      .then((data) => data?.results?.[0]?.previewUrl || undefined)
+      .catch(() => undefined)
+      .then((url) => {
         if (!isMounted) return;
-        setPreviewUrl(data.results?.[0]?.previewUrl ?? '');
-      })
-      .catch(() => {
-        if (isMounted) setPreviewUrl('');
+        setPreviewUrl(url);
+        if (!url) {
+          audioRef.current?.pause();
+          setIsPlaying(false);
+        }
       });
 
     return () => {
@@ -68,7 +71,7 @@ const Knob: React.FC = () => {
       <div
         key={i}
         className={`tick ${i < highlightNumTicks ? 'activetick' : ''}`}
-        style={{ transform: `rotate(${-135 + i * 10}deg)` }}
+        style={{ rotate: `${-135 + i * 10}deg` }}
       />
     ));
   }, []);
@@ -161,7 +164,7 @@ const Knob: React.FC = () => {
           ref={knobRef}
           id="knob"
           className="knob"
-          style={{ transform: `rotate(${knobRotation}deg)`, touchAction: 'none' }}
+          style={{ rotate: `${knobRotation}deg`, touchAction: 'none' }}
           onMouseDown={handleStart}
           onTouchStart={handleStart}
         />
