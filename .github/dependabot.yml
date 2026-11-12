@@ -6,7 +6,9 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    directories:
+      - "/"
+      - "/.github/firebase-cli"
     schedule:
       interval: "weekly" # Update frequency, e.g., daily, weekly, monthly
     ignore:

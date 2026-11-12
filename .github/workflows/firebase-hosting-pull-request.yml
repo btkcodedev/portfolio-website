@@ -10,17 +10,40 @@ permissions:
 jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v7.0.1
-      - uses: actions/setup-node@v7.1.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .nvmrc
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            .github/firebase-cli/package-lock.json
       - run: npm install --global npm@12.2.2
       - run: npm ci && npm run lint && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0.11.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
+          node-version-file: .github/firebase-cli/package.json
+          package-manager-cache: false
+      - name: Install locked Firebase CLI
+        id: firebase
+        run: |
+          npm install --global npm@12.2.2
+          deploy_dir="$RUNNER_TEMP/portfolio-firebase"
+          mkdir -p "$deploy_dir"
+          cp .github/firebase-cli/package*.json firebase.json .firebaserc "$deploy_dir/"
+          cp -R out "$deploy_dir/"
+          cd "$deploy_dir"
+          npm ci
+          printf 'entry_point=%s\n' "$deploy_dir" >> "$GITHUB_OUTPUT"
+          node -p '"version=" + require("./package.json").dependencies["firebase-tools"]' >> "$GITHUB_OUTPUT"
+      - uses: FirebaseExtended/action-hosting-deploy@500ac625ca2dd40cbd15f7659af953801858032a # v0.11.0
+        env:
+          npm_config_offline: 'true'
+        with:
+          entryPoint: ${{ steps.firebase.outputs.entry_point }}
+          firebaseToolsVersion: ${{ steps.firebase.outputs.version }}
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BTKCODES }}'
           projectId: btkcodes

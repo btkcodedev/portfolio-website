@@ -32,6 +32,7 @@ Run `npm run lint` to check the source. `npm run build` checks the project with 
 ## Deployment
 - The website is automatically deployed to Vercel and Firebase when changes are pushed to the `main` branch on GitHub.
 - For secondary deployment, visit [btkcodes.vercel.app](https://btkcodes.vercel.app).
+- Builds use `npm ci` to install the versions in `package-lock.json`. Firebase builds and Docker use Node.js 26.13.1. The Firebase deployment CLI has its own lockfile. Vercel manages the patch version within Node.js 26.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
