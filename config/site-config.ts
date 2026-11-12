@@ -528,7 +528,7 @@ const GridItems: GridItemInterface[] = [
     icon: "linkedin",
     username: "@b-t-k",
     description:
-      "Senior software engineer, Freelance web developer & Data warehouse enthusiast",
+      "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast",
     color: "#0a66c2",
     buttonTitle: "Follow",
     buttonLink: "https://www.linkedin.com/in/b-t-k/",

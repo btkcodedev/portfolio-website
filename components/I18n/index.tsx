@@ -33,7 +33,7 @@ const translations: Record<Language, Record<string, string>> = {
     Join: "ചേരുക",
     "Things I Love": "എനിക്ക് ഇഷ്ടമുള്ള കാര്യങ്ങൾ",
     LinkedIn: "ലിങ്ക്ഡ്ഇൻ",
-    "Senior software engineer, Freelance web developer & Data warehouse enthusiast":
+    "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast":
       "സീനിയർ സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയർ, ഫ്രീലാൻസ് വെബ് ഡെവലപ്പർ & ഡാറ്റ വെയർഹൗസ് തൽപ്പരൻ",
     "X (Twitter)": "X (ട്വിറ്റർ)",
     "Probe looking for wonders around! Supporter for ELT & Web applications":
@@ -172,7 +172,7 @@ const translations: Record<Language, Record<string, string>> = {
     Join: "இணை",
     "Things I Love": "நான் விரும்புவை",
     LinkedIn: "லிங்க்ட்இன்",
-    "Senior software engineer, Freelance web developer & Data warehouse enthusiast":
+    "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast":
       "சீனியர் சாஃப்ட்வேர் இன்ஜினியர், ஃப்ரீலான்ஸ் வெப் டெவலப்பர் & டேட்டா வேர்ஹவுஸ் ஆர்வலர்",
     "X (Twitter)": "X (ட்விட்டர்)",
     "Probe looking for wonders around! Supporter for ELT & Web applications":
@@ -312,7 +312,7 @@ const translations: Record<Language, Record<string, string>> = {
     Join: "ಸೇರಿ",
     "Things I Love": "ನನಗೆ ಇಷ್ಟವಾದವು",
     LinkedIn: "ಲಿಂಕ್ಡ್‌ಇನ್",
-    "Senior software engineer, Freelance web developer & Data warehouse enthusiast":
+    "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast":
       "ಸೀನಿಯರ್ ಸಾಫ್ಟ್‌ವೇರ್ ಇಂಜಿನಿಯರ್, ಫ್ರೀಲಾನ್ಸ್ ವೆಬ್ ಡೆವಲಪರ್ & ಡೇಟಾ ವೇರ್‌ಹೌಸ್ ಉತ್ಸಾಹಿ",
     "X (Twitter)": "X (ಟ್ವಿಟರ್)",
     "Probe looking for wonders around! Supporter for ELT & Web applications":
@@ -452,7 +452,7 @@ const translations: Record<Language, Record<string, string>> = {
     Join: "చేరండి",
     "Things I Love": "నాకు ఇష్టమైనవి",
     LinkedIn: "లింక్డ్‌ఇన్",
-    "Senior software engineer, Freelance web developer & Data warehouse enthusiast":
+    "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast":
       "సీనియర్ సాఫ్ట్‌వేర్ ఇంజినీర్, ఫ్రీలాన్స్ వెబ్ డెవలపర్ & డేటా వేర్‌హౌస్ ఔత్సాహికుడు",
     "X (Twitter)": "X (ట్విట్టర్)",
     "Probe looking for wonders around! Supporter for ELT & Web applications":
@@ -592,7 +592,7 @@ const translations: Record<Language, Record<string, string>> = {
     Join: "加入",
     "Things I Love": "我喜欢的事物",
     LinkedIn: "LinkedIn",
-    "Senior software engineer, Freelance web developer & Data warehouse enthusiast":
+    "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast":
       "高级软件工程师、自由职业 Web 开发人员和数据仓库爱好者",
     "X (Twitter)": "X (Twitter)",
     "Probe looking for wonders around! Supporter for ELT & Web applications":
@@ -731,7 +731,7 @@ const translations: Record<Language, Record<string, string>> = {
     "View profile": "プロフィールを見る",
     "See badges 🏅": "バッジを見る 🏅",
     LinkedIn: "LinkedIn",
-    "Senior software engineer, Freelance web developer & Data warehouse enthusiast":
+    "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast":
       "シニアソフトウェアエンジニア、フリーランス Web 開発者、データウェアハウス愛好家",
     "X (Twitter)": "X (Twitter)",
     "Probe looking for wonders around! Supporter for ELT & Web applications":
@@ -870,7 +870,7 @@ const translations: Record<Language, Record<string, string>> = {
     "View profile": "प्रोफाइल देखें",
     "See badges 🏅": "बैज देखें 🏅",
     LinkedIn: "LinkedIn",
-    "Senior software engineer, Freelance web developer & Data warehouse enthusiast":
+    "Senior software engineer, Freelance OSS developer & Data warehouse enthusiast":
       "सीनियर सॉफ्टवेयर इंजीनियर, फ्रीलांस वेब डेवलपर और डेटा वेयरहाउस उत्साही",
     "X (Twitter)": "X (Twitter)",
     "Probe looking for wonders around! Supporter for ELT & Web applications":
